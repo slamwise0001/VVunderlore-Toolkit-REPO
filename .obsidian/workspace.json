@@ -13,44 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Extras/Party Overview.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Party Overview"
-            }
-          },
-          {
-            "id": "a09a1f4541da4c8c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Adventures/Omninomicon.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Omninomicon"
-            }
-          },
-          {
-            "id": "475f2cb23c217eee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "World/People/Player Characters/Active/Chixlum the Handsy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chixlum the Handsy"
+              "title": "Welcome"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -220,17 +191,20 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-5e-statblocks:Open Creature pane": false,
-      "initiative-tracker:Initiative Tracker Encounter Builder": false
+      "initiative-tracker:Initiative Tracker Encounter Builder": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a09a1f4541da4c8c",
+  "active": "26578a02051ee4c3",
   "lastOpenFiles": [
+    "World/Places/EXAMPLE - Tower of Struug Nur.md",
+    "Welcome.md",
+    "Extras/Party Overview.md",
+    "Adventures/Omninomicon.md",
     "Extras/Templates/newplace_template.md",
     "ENODIR ADVENTURE FIX.md",
-    "Extras/Party Overview.md",
     "Adventures/Cool Fun For Everyone/Cool Fun For Everyone - Adventure Hub.md",
     "World/People/Player Characters/Active/Chixlum the Handsy.md",
-    "Adventures/Omninomicon.md",
     "World/Places/TESTING\n.md",
     "Adventures/Cool Fun For Everyone/Session Notes/Session 1 - 3.21.25.md",
     "Adventures/Cool Fun For Everyone/Session Notes/Session 2 - 3.28.25.md",
@@ -249,7 +223,6 @@
     "Adventures/Cool Fun For Everyone/Materials",
     "Adventures/The Testing of VVunderlore/Session Notes",
     "Adventures/Cool Fun For Everyone/Session Notes",
-    "_START HERE_.md",
     "Adventures/The Testing of VVunderlore/Materials",
     "Adventures/The Testing of VVunderlore/Adventure",
     "Adventures/Cool Fun For Everyone",
@@ -258,7 +231,6 @@
     "Extras/SYS/Another Example_summary.md",
     "Adventures/The Far Side of the Butt/The Far Side of the Butt - Adventure Hub.md",
     "Compendium/Spells/_Spellbook.md",
-    "Extras/SYS/The Far Side of the Butt_summary.md",
     "Adventures/The Far Side of the Butt/Session Notes",
     "Adventures/The Far Side of the Butt/Materials"
   ]

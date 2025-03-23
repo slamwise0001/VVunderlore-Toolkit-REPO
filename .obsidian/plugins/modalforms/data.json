@@ -4,6 +4,748 @@
   "globalNamespace": "MF",
   "formDefinitions": [
     {
+      "title": "Next Session Date",
+      "name": "next-session-date",
+      "customClassname": "calendar",
+      "fields": [
+        {
+          "name": "date",
+          "label": "WHEN WE WILL PLAY???",
+          "description": "EVER? NEVER?",
+          "isRequired": false,
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "New Creature",
+      "name": "new-creature",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Creature Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "location",
+          "label": "Classification",
+          "description": "Where does this creature belong in your Bestiary?",
+          "isRequired": true,
+          "input": {
+            "type": "dataview",
+            "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.folder.startsWith(\"Compendium/Bestiary\"))\n    .map(p => p.file.folder.split(\"/\")[2])\n)).sort();"
+          }
+        },
+        {
+          "name": "statblock",
+          "label": "Statblock?",
+          "description": "Do you want a statblock made for this character?",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": true
+          }
+        },
+        {
+          "name": "narrative",
+          "label": "Narrative Description",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "description",
+          "label": "Creature Description",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "size",
+          "label": "Size",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Tiny",
+                "label": "Tiny"
+              },
+              {
+                "value": "Small",
+                "label": "Small"
+              },
+              {
+                "value": "Medium",
+                "label": "Medium"
+              },
+              {
+                "value": "Large",
+                "label": "Large"
+              },
+              {
+                "value": "Huge",
+                "label": "Huge"
+              },
+              {
+                "value": "Gargantuan",
+                "label": "Gargantuan"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type",
+          "label": "Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Humanoid",
+                "label": "Humanoid"
+              },
+              {
+                "value": "Undead",
+                "label": "Undead"
+              },
+              {
+                "value": "Beast",
+                "label": "Beast"
+              },
+              {
+                "value": "Fey",
+                "label": "Fey"
+              },
+              {
+                "value": "Construct",
+                "label": "Construct"
+              },
+              {
+                "value": "Elemental",
+                "label": "Elemental"
+              },
+              {
+                "value": "Abberation",
+                "label": "Abberation"
+              },
+              {
+                "value": "Dragon",
+                "label": "Dragon"
+              },
+              {
+                "value": "Giant",
+                "label": "Giant"
+              },
+              {
+                "value": "Ooze",
+                "label": "Ooze"
+              },
+              {
+                "value": "Plant",
+                "label": "Plant"
+              }
+            ]
+          }
+        },
+        {
+          "name": "alignment",
+          "label": "Alignment",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Lawful Good",
+                "label": "Lawful Good"
+              },
+              {
+                "value": "Neutral Good",
+                "label": "Neutral Good"
+              },
+              {
+                "value": "Chaotic Good",
+                "label": "Chaotic Good"
+              },
+              {
+                "value": "Lawful Neutral",
+                "label": "Lawful Neutral"
+              },
+              {
+                "value": "Neutral",
+                "label": "Neutral"
+              },
+              {
+                "value": "Chaotic Neutral",
+                "label": "Chaotic Neutral"
+              },
+              {
+                "value": "Lawful Evil",
+                "label": "Lawful Evil"
+              },
+              {
+                "value": "Neutral Evil",
+                "label": "Neutral Evil"
+              },
+              {
+                "value": "Chaotic Evil",
+                "label": "Chaotic Evil"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ac",
+          "label": "Armor Class",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "armortype",
+          "label": "Natural Armor?",
+          "description": "Does this creature have natural armor?",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "hp",
+          "label": "Hit Points",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "hitdie",
+          "label": "Hit Die",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "d6",
+                "label": "d6"
+              },
+              {
+                "value": "d8",
+                "label": "d8"
+              },
+              {
+                "value": "d10",
+                "label": "d10"
+              },
+              {
+                "value": "d12",
+                "label": "d12"
+              }
+            ]
+          }
+        },
+        {
+          "name": "w-speed",
+          "label": "Walking Speed",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "s-speed",
+          "label": "Swimming Speed",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "f-speed",
+          "label": "Flying Speed",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "cre-str",
+          "label": "Strength",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "cre-dex",
+          "label": "Dexterity",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "cre-con",
+          "label": "Constitution",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "cre-int",
+          "label": "Intelligence",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "cre-wis",
+          "label": "Wisdom",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "cre-cha",
+          "label": "Charisma",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "savethrow",
+          "label": "Saving Throws",
+          "description": "What saving throws is this creature proficient in?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Strength",
+              "Dexterity",
+              "Constitution",
+              "Wisdom"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "skills",
+          "label": "Skills",
+          "description": "What skills is this creature proficient in, if any?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Athletics",
+              "Acrobatics",
+              "Sleight of Hand",
+              "Stealth",
+              "Arcana",
+              "History",
+              "Investigation",
+              "Nature",
+              "Religion",
+              "Animal Handling",
+              "Insight",
+              "Medicine",
+              "Perception",
+              "Survival",
+              "Deception",
+              "Intimidation",
+              "Performance",
+              "Persuasion"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "dmg_vul",
+          "label": "Damage Vulnerabilities",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Acid",
+              "Bludgeoning",
+              "Cold",
+              "Fire",
+              "Force",
+              "Lightning",
+              "Necrotic",
+              "Piercing",
+              "Poision",
+              "Psychic",
+              "Radiant",
+              "Slashing",
+              "Thunder"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "dmg_res",
+          "label": "Damage Resistances",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Acid",
+              "Bludgeoning",
+              "Cold",
+              "Fire",
+              "Force",
+              "Lightning",
+              "Necrotic",
+              "Piercing",
+              "Poision",
+              "Psychic",
+              "Radiant",
+              "Slashing",
+              "Thunder"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "dmg_imm",
+          "label": "Damage Immunities",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Acid",
+              "Bludgeoning",
+              "Cold",
+              "Fire",
+              "Force",
+              "Lightning",
+              "Necrotic",
+              "Piercing",
+              "Poision",
+              "Psychic",
+              "Radiant",
+              "Slashing",
+              "Thunder"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "cond_imm",
+          "label": "Condition Immunities",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Blinded",
+              "Charmed",
+              "Deafened",
+              "Frightened",
+              "Paralyzed",
+              "Petrified",
+              "Poisoned",
+              "Stunned"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "senses",
+          "label": "Senses",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Blindsight",
+              "Darkvision",
+              "Tremorsense",
+              "Truesight"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "cr",
+          "label": "Challenge Rating",
+          "description": "(this is more used to apply some modifiers than actually rate the challenge)",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "0",
+                "label": "0"
+              },
+              {
+                "value": "1/8",
+                "label": "1/8"
+              },
+              {
+                "value": "1/4",
+                "label": "1/4"
+              },
+              {
+                "value": "1/2",
+                "label": "1/2"
+              },
+              {
+                "value": "1",
+                "label": "1"
+              },
+              {
+                "value": "2",
+                "label": "2"
+              },
+              {
+                "value": "3",
+                "label": "3"
+              },
+              {
+                "value": "4",
+                "label": "4"
+              },
+              {
+                "value": "5",
+                "label": "5"
+              },
+              {
+                "value": "6",
+                "label": "6"
+              },
+              {
+                "value": "7",
+                "label": "7"
+              },
+              {
+                "value": "8",
+                "label": "8"
+              },
+              {
+                "value": "9",
+                "label": "9"
+              },
+              {
+                "value": "10",
+                "label": "10"
+              },
+              {
+                "value": "11",
+                "label": "11"
+              },
+              {
+                "value": "12",
+                "label": "12"
+              },
+              {
+                "value": "13",
+                "label": "13"
+              },
+              {
+                "value": "14",
+                "label": "14"
+              },
+              {
+                "value": "15",
+                "label": "15"
+              },
+              {
+                "value": "16",
+                "label": "16"
+              },
+              {
+                "value": "17",
+                "label": "17"
+              },
+              {
+                "value": "18",
+                "label": "18"
+              },
+              {
+                "value": "19",
+                "label": "19"
+              },
+              {
+                "value": "20",
+                "label": "20"
+              },
+              {
+                "value": "21",
+                "label": "21"
+              },
+              {
+                "value": "22",
+                "label": "22"
+              },
+              {
+                "value": "23",
+                "label": "23"
+              },
+              {
+                "value": "24",
+                "label": "24"
+              },
+              {
+                "value": "25",
+                "label": "25"
+              },
+              {
+                "value": "26",
+                "label": "26"
+              },
+              {
+                "value": "27",
+                "label": "27"
+              },
+              {
+                "value": "28",
+                "label": "28"
+              },
+              {
+                "value": "29",
+                "label": "29"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ]
+          }
+        },
+        {
+          "name": "traits",
+          "label": "Traits",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "actions",
+          "label": "Actions",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "reactions",
+          "label": "Reactions",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "legendary",
+          "label": "Legendary Actions",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "lair-action",
+          "label": "Lair Actions",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "regional",
+          "label": "Regional Effects",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
       "title": "New Item",
       "name": "new-item-form",
       "customClassname": "items",
@@ -399,18 +1141,596 @@
       "version": "1"
     },
     {
-      "title": "Next Session Date",
-      "name": "next-session-date",
-      "customClassname": "calendar",
+      "title": "Create a New NPC",
+      "name": "new-npc-form",
       "fields": [
         {
-          "name": "date",
-          "label": "WHEN WE WILL PLAY???",
-          "description": "EVER? NEVER?",
+          "name": "Name",
+          "label": "Name",
+          "description": "What is the name of this NPC",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Appearances",
+          "label": "",
+          "description": "What adventures has this NPC appeared in?",
           "isRequired": false,
           "input": {
-            "type": "date",
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1]) // Extract first-level folder\n)).sort();",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "bio",
+          "label": "Biography",
+          "description": "Who is this person?",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
             "hidden": false
+          }
+        },
+        {
+          "name": "Aliases",
+          "label": "Aliases",
+          "description": "Does this NPC go by any nicknames or aliases? (comma separated)",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Affiliates",
+          "label": "Affiliates",
+          "description": "Who are their closest affiliates? (comma separated)",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Factions",
+          "label": "Factions",
+          "description": "Is this NPC associated with any known organization?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "notes",
+            "folder": "World/People/Factions",
+            "options": []
+          }
+        },
+        {
+          "name": "Primary Location",
+          "label": "Primary Location",
+          "description": "Where does this NPC hang out?",
+          "isRequired": false,
+          "input": {
+            "type": "dataview",
+            "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.path.startsWith(\"Places/\"))\n    .flatMap(p => p.file.folder.split(\"/\").slice(1).concat(p.file.name)) // Get all folder levels + note name\n)).sort();"
+          }
+        },
+        {
+          "name": "Alignment",
+          "label": "Alignment",
+          "description": "What is this NPC's Alignment",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "Lawful Good",
+                "label": "Lawful Good"
+              },
+              {
+                "value": "Neutral Good",
+                "label": "Neutral Good"
+              },
+              {
+                "value": "Chaotic Good",
+                "label": "Chaotic Good"
+              },
+              {
+                "value": "Lawful Neutral",
+                "label": "Lawful Neutral"
+              },
+              {
+                "value": "True Neutral",
+                "label": "True Neutral"
+              },
+              {
+                "value": "Chaotic Neutral",
+                "label": "Chaotic Neutral"
+              },
+              {
+                "value": "Lawful Evil",
+                "label": "Lawful Evil"
+              },
+              {
+                "value": "Lawful Evil",
+                "label": "Neutral Evil"
+              },
+              {
+                "value": "Chaotic Evil",
+                "label": "Chaotic Evil"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Class",
+          "label": "",
+          "description": "What class is this NPC (if any)?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "notes",
+            "folder": "Compendium/Classes",
+            "options": []
+          }
+        },
+        {
+          "name": "Species",
+          "label": "",
+          "description": "What species is this NPC?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "notes",
+            "folder": "Compendium/Species",
+            "options": []
+          }
+        },
+        {
+          "name": "Known Spells",
+          "label": "",
+          "description": "Does this NPC know any spells?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Compendium/Spells",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "Stats",
+          "label": "Stats",
+          "description": "Does this NPC need a stat block made?",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Size",
+          "label": "Size",
+          "description": "What is the NPC's size?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Tiny",
+                "label": "Tiny"
+              },
+              {
+                "value": "Small",
+                "label": "Small"
+              },
+              {
+                "value": "Medium",
+                "label": "Medium"
+              },
+              {
+                "value": "Large",
+                "label": "Large"
+              },
+              {
+                "value": "Huge",
+                "label": "Huge"
+              },
+              {
+                "value": "Gargantuan",
+                "label": "Gargantuan"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Type",
+          "label": "Type",
+          "description": "What type of creature is this NPC?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Humanoid",
+                "label": "Humanoid"
+              },
+              {
+                "value": "Undead",
+                "label": "Undead"
+              },
+              {
+                "value": "Beast",
+                "label": "Beast"
+              },
+              {
+                "value": "Fey",
+                "label": "Fey"
+              },
+              {
+                "value": "Construct",
+                "label": "Construct "
+              },
+              {
+                "value": "Gargantuan",
+                "label": "Gargantuan"
+              },
+              {
+                "value": "Elemental",
+                "label": "Elemental"
+              },
+              {
+                "value": "Aberration",
+                "label": "Aberration"
+              },
+              {
+                "value": "Dragon",
+                "label": "Dragon"
+              },
+              {
+                "value": "Giant",
+                "label": "Giant"
+              },
+              {
+                "value": "Ooze",
+                "label": "Ooze"
+              },
+              {
+                "value": "Plant",
+                "label": "Plant"
+              }
+            ]
+          }
+        },
+        {
+          "name": "npc_ac",
+          "label": "Armor Class",
+          "description": "(leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_hp",
+          "label": "Max Hit Points",
+          "description": "(leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_hit dice",
+          "label": "Hit Dice",
+          "description": "How many of which hit dice doe this character have?(leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "d6",
+                "label": "d6"
+              },
+              {
+                "value": "d8",
+                "label": "d8"
+              },
+              {
+                "value": "d10",
+                "label": "d10"
+              }
+            ]
+          }
+        },
+        {
+          "name": "npc_STR",
+          "label": "Strength Score ",
+          "description": "Out of 20 (leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_DEX",
+          "label": "Dexterity Score",
+          "description": "Out of 20 (leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_CON",
+          "label": "Constitution Score",
+          "description": "Out of 20 (leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_INT",
+          "label": "Intelligence Score",
+          "description": "Out of 20 (leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_WIS",
+          "label": "Wisdom Score",
+          "description": "Out of 20 (leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "npc_CHA",
+          "label": "Charisma Score",
+          "description": "Out of 20 (leave blank for randomization)",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Proficiency",
+          "label": "Proficiencies",
+          "description": "What skills is this NPC proficient in?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Athletics",
+              "Acrobatics",
+              "Sleight of Hand",
+              "Arcana",
+              "History",
+              "Investigation",
+              "Nature",
+              "Religion",
+              "Animal Handling",
+              "Insight",
+              "Medicine",
+              "Perception",
+              "Survival",
+              "Deception",
+              "Intimidation",
+              "Performance",
+              "Persuasion"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "Damage Vulnerability",
+          "label": "Damage Vulnerability",
+          "description": "What damage types are they vulnerable to (double damage)?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Acid",
+              "Bludgeoning",
+              "Cold",
+              "Fire",
+              "Force",
+              "Lightning",
+              "Necrotic",
+              "Piercing",
+              "Poison",
+              "Psychic",
+              "Radiant",
+              "Slashing",
+              "Thunder"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "Damage Resistance",
+          "label": "Damage Resistance",
+          "description": "What damage types are they resistant to (half damage)?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Acid",
+              "Bludgeoning",
+              "Cold",
+              "Fire",
+              "Force",
+              "Lightning",
+              "Necrotic",
+              "Piercing",
+              "Poison",
+              "Psychic",
+              "Radiant",
+              "Slashing",
+              "Thunder"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "Damage Immunity",
+          "label": "Damage Immunity",
+          "description": "What damage types are they immune to?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Acid",
+              "Bludgeoning",
+              "Cold",
+              "Fire",
+              "Force",
+              "Lightning",
+              "Necrotic",
+              "Piercing",
+              "Poison",
+              "Psychic",
+              "Radiant",
+              "Slashing",
+              "Thunder"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "Condition Immunity",
+          "label": "Condition Immunity",
+          "description": "What conditions are they immune to?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Stats",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Blinded",
+              "Charmed",
+              "Deafened",
+              "Frightened",
+              "Paralyzed",
+              "Petrified",
+              "Poisoned",
+              "Stunned"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         }
       ],
@@ -620,7 +1940,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1]) // Extract first-level folder\n)).sort();",
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         }
       ],
