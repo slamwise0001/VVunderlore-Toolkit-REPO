@@ -1,0 +1,265 @@
+{
+  "main": {
+    "id": "543b247f4d4cbd44",
+    "type": "split",
+    "children": [
+      {
+        "id": "18691ade0610be5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26578a02051ee4c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Extras/Party Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Party Overview"
+            }
+          },
+          {
+            "id": "a09a1f4541da4c8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Adventures/Omninomicon.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Omninomicon"
+            }
+          },
+          {
+            "id": "475f2cb23c217eee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "World/People/Player Characters/Active/Chixlum the Handsy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chixlum the Handsy"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0c691daa9c691d05",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7cbf0a88b58e228",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7a8417feed5c0df5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "734ce6b0a03254e6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fbc40befdb5c8f96",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "66be4a0fac2d2021",
+    "type": "split",
+    "children": [
+      {
+        "id": "0bdcf215da88ca0c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f2abdf69f660050a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "b488d0ef9a36faa4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "69b554cd19017f27",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0d3f1b359069c495",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          },
+          {
+            "id": "b085131ecb0daec7",
+            "type": "leaf",
+            "state": {
+              "type": "initiative-tracker-view",
+              "state": {},
+              "icon": "initiative-tracker",
+              "title": "Initiative Tracker"
+            }
+          },
+          {
+            "id": "d8cad71d9f7f8349",
+            "type": "leaf",
+            "state": {
+              "type": "modal-form-manage-forms-view",
+              "state": {},
+              "icon": "documents",
+              "title": "Manage forms"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 803.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "modalforms:Edit forms": false,
+      "templater-obsidian:Templater": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-5e-statblocks:Open Creature pane": false,
+      "initiative-tracker:Initiative Tracker Encounter Builder": false
+    }
+  },
+  "active": "a09a1f4541da4c8c",
+  "lastOpenFiles": [
+    "Extras/Templates/newplace_template.md",
+    "ENODIR ADVENTURE FIX.md",
+    "Extras/Party Overview.md",
+    "Adventures/Cool Fun For Everyone/Cool Fun For Everyone - Adventure Hub.md",
+    "World/People/Player Characters/Active/Chixlum the Handsy.md",
+    "Adventures/Omninomicon.md",
+    "World/Places/TESTING\n.md",
+    "Adventures/Cool Fun For Everyone/Session Notes/Session 1 - 3.21.25.md",
+    "Adventures/Cool Fun For Everyone/Session Notes/Session 2 - 3.28.25.md",
+    "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
+    "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
+    "World/People/Non-Player Characters/Lomin Topplesquirt.md",
+    "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
+    "Adventures/The Testing of VVunderlore/Adventure/Chapter 1 - A Man with a Dream.md",
+    "Extras/Templates/(Cool Fun For Everyone)sessiontemplate.md",
+    "Extras/SYS/The Testing of VVunderlore_summary.md",
+    "Extras/SYS/Cool Fun For Everyone_summary.md",
+    "Extras/Templates/newadventure_template.md",
+    "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
+    "Extras/Templates/(The Testing of VVunderlore)sessiontemplate.md",
+    "Adventures/Cool Fun For Everyone/Adventure",
+    "Adventures/Cool Fun For Everyone/Materials",
+    "Adventures/The Testing of VVunderlore/Session Notes",
+    "Adventures/Cool Fun For Everyone/Session Notes",
+    "_START HERE_.md",
+    "Adventures/The Testing of VVunderlore/Materials",
+    "Adventures/The Testing of VVunderlore/Adventure",
+    "Adventures/Cool Fun For Everyone",
+    "Adventures/The Testing of VVunderlore",
+    "Adventures/Its An Example/Its An Example - Adventure Hub.md",
+    "Extras/SYS/Another Example_summary.md",
+    "Adventures/The Far Side of the Butt/The Far Side of the Butt - Adventure Hub.md",
+    "Compendium/Spells/_Spellbook.md",
+    "Extras/SYS/The Far Side of the Butt_summary.md",
+    "Adventures/The Far Side of the Butt/Session Notes",
+    "Adventures/The Far Side of the Butt/Materials"
+  ]
+}

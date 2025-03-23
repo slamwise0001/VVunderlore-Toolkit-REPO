@@ -1,0 +1,630 @@
+{
+  "editorPosition": "right",
+  "attachShortcutToGlobalWindow": false,
+  "globalNamespace": "MF",
+  "formDefinitions": [
+    {
+      "title": "New Item",
+      "name": "new-item-form",
+      "customClassname": "items",
+      "fields": [
+        {
+          "name": "itemName",
+          "label": "Item Name",
+          "description": "Make it a good one",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "narrativeDesc",
+          "label": "Narrative Description",
+          "description": "A brief description that doesn't give too much away",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "details",
+          "label": "Item Description",
+          "description": "and details!",
+          "isRequired": true,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "price",
+          "label": "Price",
+          "description": "in GP",
+          "isRequired": true,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "rarity",
+          "label": "Rarity",
+          "description": "Select rarity",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Common",
+                "label": "Common"
+              },
+              {
+                "value": "Uncommon",
+                "label": "Uncommon"
+              },
+              {
+                "value": "Rare",
+                "label": "Rare"
+              },
+              {
+                "value": "Very Rare",
+                "label": "Very Rare"
+              },
+              {
+                "value": "Legendary",
+                "label": "Legendary"
+              },
+              {
+                "value": "Artifact",
+                "label": "Artifact"
+              }
+            ]
+          }
+        },
+        {
+          "name": "magical",
+          "label": "Magical",
+          "description": "Is the item magical? (this doesn't include +1 armor and weapons)",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "magicalitemtype",
+          "label": "Magical Item Type",
+          "description": "What kind of magical item is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "magical",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "Weapon",
+                "label": "Weapon"
+              },
+              {
+                "value": "Armor",
+                "label": "Armor"
+              },
+              {
+                "value": "Potion",
+                "label": "Potion"
+              },
+              {
+                "value": "Ring",
+                "label": "Ring"
+              },
+              {
+                "value": "Rod",
+                "label": "Rod"
+              },
+              {
+                "value": "Scroll",
+                "label": "Scroll"
+              },
+              {
+                "value": "Staff",
+                "label": "Staff"
+              },
+              {
+                "value": "Wand",
+                "label": "Wand"
+              },
+              {
+                "value": "Wondrous Item",
+                "label": "Wondrous Item"
+              }
+            ]
+          }
+        },
+        {
+          "name": "folder",
+          "label": "Item Home",
+          "description": "Homebrew or just magical?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "magical",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Compendium/Items/Homebrew Items",
+                "label": "Homebrew"
+              },
+              {
+                "value": "Compendium/Items/Magical Items",
+                "label": "Magical"
+              }
+            ]
+          }
+        },
+        {
+          "name": "itemtype",
+          "label": "Item Type",
+          "description": "What kind of item is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "magical",
+            "type": "boolean",
+            "value": false
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "Consumable",
+                "label": "Consumable"
+              },
+              {
+                "value": "Valuable",
+                "label": "Valuable"
+              },
+              {
+                "value": "Gear",
+                "label": "Gear"
+              },
+              {
+                "value": "Compendium/Items/Tools",
+                "label": "Tool"
+              },
+              {
+                "value": "Compendium/Items/Instruments",
+                "label": "Instrument"
+              },
+              {
+                "value": "Weapon",
+                "label": "Weapon"
+              },
+              {
+                "value": "Armor",
+                "label": "Armor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "consumable",
+          "label": "Consumable",
+          "description": "What type of consumable is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "itemtype",
+            "type": "isExactly",
+            "value": "Consumable"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Compendium/Items/Consumables/Potions",
+                "label": "Potion"
+              },
+              {
+                "value": "Compendium/Items/Consumables/Food",
+                "label": "Food"
+              }
+            ]
+          }
+        },
+        {
+          "name": "valuable",
+          "label": "Valuable Type",
+          "description": "What type of valuable is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "itemtype",
+            "type": "isExactly",
+            "value": "Valuable"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Compendium/Items/Valuables/Gems",
+                "label": "Gems"
+              },
+              {
+                "value": "Compendium/Items/Valuables/Trade Goods",
+                "label": "Trade Goods"
+              }
+            ]
+          }
+        },
+        {
+          "name": "gear",
+          "label": "Gear",
+          "description": "What type of gear is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "itemtype",
+            "type": "isExactly",
+            "value": "Gear"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Compendium/Items/Gear/Mounts and Vehicles",
+                "label": "Mount or Vehicle"
+              },
+              {
+                "value": "Compendium/Items/Gear",
+                "label": "Other"
+              }
+            ]
+          }
+        },
+        {
+          "name": "weapon",
+          "label": "Weapon type",
+          "description": "What class of weapon is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "itemtype",
+            "type": "isExactly",
+            "value": "Weapon"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Compendium/Items/Weapons and Armor/Weapons/Simple",
+                "label": "Simple"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Weapons/Martial",
+                "label": "Martial"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Weapons/Ammunition",
+                "label": "Ammunition"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Weapons/Variant",
+                "label": "Varient (Minor Magic, +1s, etc)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "armor",
+          "label": "Armor Type",
+          "description": "What type of armor is it?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "itemtype",
+            "type": "isExactly",
+            "value": "Armor"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Compendium/Items/Weapons and Armor/Armor",
+                "label": "Sheild"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Armor/Light",
+                "label": "Light"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Armor/Medium",
+                "label": "Medium"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Armor/Heavy",
+                "label": "Heavy"
+              },
+              {
+                "value": "Compendium/Items/Weapons and Armor/Armor/Variant",
+                "label": "Varient (Minor Magic, +1s, etc)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "attunement",
+          "label": "Attunement",
+          "description": "Does this item require attunement?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "magical",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "attribution",
+          "label": "Attribution",
+          "description": "Where did this item come from?",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Next Session Date",
+      "name": "next-session-date",
+      "customClassname": "calendar",
+      "fields": [
+        {
+          "name": "date",
+          "label": "WHEN WE WILL PLAY???",
+          "description": "EVER? NEVER?",
+          "isRequired": false,
+          "input": {
+            "type": "date",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "New Place",
+      "name": "new-place-form",
+      "customClassname": "compendium",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "type",
+          "label": "Type",
+          "description": "What kind of place is it?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "Town",
+                "label": "Town"
+              },
+              {
+                "value": "Dungeon",
+                "label": "Dungeon"
+              },
+              {
+                "value": "Landmark",
+                "label": "Landmark"
+              },
+              {
+                "value": "Region",
+                "label": "Region"
+              },
+              {
+                "value": "Building",
+                "label": "Building"
+              },
+              {
+                "value": "Complex",
+                "label": "Complex"
+              },
+              {
+                "value": "Camp",
+                "label": "Camp"
+              }
+            ]
+          }
+        },
+        {
+          "name": "narrative desc",
+          "label": "Narrative Decription",
+          "description": "How would you describe this place to your players?",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "desc",
+          "label": "Description",
+          "description": "What's this place all about?",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "history",
+          "label": "History",
+          "description": "What's the history of this location?",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "world",
+          "label": "World",
+          "description": "What planet or plane of existence is this place on?",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "country",
+          "label": "Country",
+          "description": "What controlled region is this place in?",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "population size",
+          "label": "Population Size",
+          "description": "Roughly how big is this place.",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "metropolis",
+                "label": "Metropolis"
+              },
+              {
+                "value": "city",
+                "label": "City"
+              },
+              {
+                "value": "town",
+                "label": "Town"
+              },
+              {
+                "value": "Village",
+                "label": "Village"
+              },
+              {
+                "value": "Hamlet",
+                "label": "Hamlet"
+              },
+              {
+                "value": "fort",
+                "label": "Fort"
+              },
+              {
+                "value": "camp",
+                "label": "Camp"
+              }
+            ]
+          }
+        },
+        {
+          "name": "climate",
+          "label": "Climate",
+          "description": "What's the weather like?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "temperate",
+                "label": "Temperate"
+              },
+              {
+                "value": "wet",
+                "label": "Wet"
+              },
+              {
+                "value": "arid",
+                "label": "Arid"
+              },
+              {
+                "value": "cold",
+                "label": "Cold"
+              }
+            ]
+          }
+        },
+        {
+          "name": "denizens",
+          "label": "Known Denizens",
+          "description": "Any NPCs or PCs that would be found here? (comma separated)",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "appearences",
+          "label": "Appears In",
+          "description": "I this place featured in any adventures?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1]) // Extract first-level folder\n)).sort();",
+            "allowUnknownValues": true
+          }
+        }
+      ],
+      "version": "1"
+    }
+  ]
+}
