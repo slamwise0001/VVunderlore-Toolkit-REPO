@@ -1,4 +1,4 @@
-# The VVunderlore Toolkit version 1.0
+# The VVunderlore Toolkit version 1.1
 
 ##### You're here because you downloaded the full vault. Hooray! This is absolutely the most functional version of all of my tools and templates right now. However, that doesn't mean there isn't super useful stuff on the [website](http://vvunderlore.com) too.  
 
