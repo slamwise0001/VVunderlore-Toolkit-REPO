@@ -10,7 +10,7 @@ It turned out a bit more 5e than I would have liked but I'll work on that.
 Visit the website to find info on the [forms](https://vvunderlore.com/Toolkit/Compendium+Templates/All+Template+Forms) and [plugins](https://vvunderlore.com/Toolkit/Plugins) you need to install to make this whole thing work as well as documentation on each tool or 
 [template](https://vvunderlore.com/toolkit/compendium_templates). You'll also find useful information about Obsidian like the [Quick Start Guide](https://vvunderlore.com/Toolkit/Obsidian+Quick+Start+Guide) and [Glossary of Obsidian Stuff](https://vvunderlore.com/Toolkit/Obsidian+Basics+and+Glossary). At least do the forms and plugins before you do anything else!
 
->[!success] **When you're ready, you'll probably want to start [[Omninomicon|here]] or just**   `BUTTON[newadventure]` **!**
+>[!success] **When you're ready, head over to the [[Omninomicon]] and create your first adventure!**
 
 ### Changes and Updates
 I'm constantly expanding and evolving this toolkit so I'll try to keep announcements as regular and loud as I can. If that fails, most notes  on the website have a "Roadmap and Changelog" box at the top that I try to remember to update. I'm not quite sure how updates to the full vault will go. We'll cross the bridge later.
