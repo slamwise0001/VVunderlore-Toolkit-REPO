@@ -4,16 +4,15 @@
 
 In here are all the tools (and more[^1]) that I've built for my TTRPG adventure writing, world building, and game running. There are some examples of players, items, etc., in here to help you get a sense of how things are going to look and work before you start plugging your own creations in. But you should feel free to delete it all when you're ready (especially the example adventure).  
 
-It turned out a bit more 5e than I would have liked but I'll work on that. 
+Right now it's very specifically 5e, but the goal is for that to grow and the toolkit to be a game-agnostic resource for running all sorts of games.
 
 ## The First Step
-Visit the website to find info on the [forms](https://vvunderlore.com/Toolkit/Compendium+Templates/All+Template+Forms) and [plugins](https://vvunderlore.com/Toolkit/Plugins) you need to install to make this whole thing work as well as documentation on each tool or 
-[template](https://vvunderlore.com/toolkit/compendium_templates). You'll also find useful information about Obsidian like the [Quick Start Guide](https://vvunderlore.com/Toolkit/Obsidian+Quick+Start+Guide) and [Glossary of Obsidian Stuff](https://vvunderlore.com/Toolkit/Obsidian+Basics+and+Glossary). At least do the forms and plugins before you do anything else!
+This download now has everything you need included from plugins to templates to forms. Start creating! You'll still find useful information about Obsidian like the [Quick Start Guide](https://vvunderlore.com/Toolkit/Obsidian+Quick+Start+Guide) and [Glossary of Obsidian Stuff](https://vvunderlore.com/Toolkit/Obsidian+Basics+and+Glossary) on the website. 
 
 >[!success] **When you're ready, head over to the [[Omninomicon]] and create your first adventure!**
 
 ### Changes and Updates
-I'm constantly expanding and evolving this toolkit so I'll try to keep announcements as regular and loud as I can. If that fails, most notes  on the website have a "Roadmap and Changelog" box at the top that I try to remember to update. I'm not quite sure how updates to the full vault will go. We'll cross the bridge later.
+I'm constantly expanding and evolving this toolkit so I'll try to keep announcements as regular and loud as I can. If that fails, the front page and most notes on the website have a changelog and/or roadmap that I try to remember to update. 
 
 I'll also post regular updates, explanations, tutorials, and rants about the state of the world on my TikTok: **[@son_of_pizza](http://tiktok.com/@son_of_pizza)**.
 
