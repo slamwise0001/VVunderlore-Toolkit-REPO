@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Welcome.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Welcome"
             }
           }
         ],
@@ -226,6 +226,7 @@
   },
   "active": "698557a9a067f3e2",
   "lastOpenFiles": [
+    "README.md",
     "Welcome.md",
     "Adventures/Omninomicon.md",
     "World/People/Player Characters/Inactive/Burrata Ensalada.md",
@@ -234,7 +235,6 @@
     "World/People/Player Characters/Active/Munch Tippledew.md",
     "World/People/Player Characters/Active/Chixlum the Handsy.md",
     "Extras/PC Dashboards/dash-Burrata Ensalada.md",
-    "README.md",
     "Extras/Party Overview.md",
     "Extras/Templates/playerdash_template.md",
     "Extras/Templates/statblock_template.md",
