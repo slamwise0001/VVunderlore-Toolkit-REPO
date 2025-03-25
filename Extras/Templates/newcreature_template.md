@@ -196,10 +196,11 @@ let sanitizedClassification = classification.replace(/[^a-zA-Z0-9-_ ]/g, "").tri
 let fileName = name.replace(/[^a-zA-Z0-9-_ ]/g, "").trim();
 let filePath = `Compendium/Bestiary/${sanitizedClassification}/${fileName}`;
 
-console.log("Final Statblock:\n", statblock);
 
 
-await tp.file.create_new(frontmatter.trim() + "\n" + statBlock.trim() + "\n" + statblock.trim(), filePath);
+
+
+await tp.file.create_new(frontmatter.trim() + "\n" + statBlock.trim(), filePath);
 
 
 
