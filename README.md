@@ -28,7 +28,7 @@ If you have suggestions as to how I can improve this toolkit or you want to requ
 ##### KNOWN ISSUES:
 - Party overview creates a blank line every time you switch between players. It's a fun little game.
 - Issue with NPC Statblock gen. Not concerned.
-- More than I forgot or don't know about yet.
+- More that I forgot or don't know about yet.
 
 ## v1.0 - 3.14.25
 - Full environment release, including:
