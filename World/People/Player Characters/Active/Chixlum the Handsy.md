@@ -57,7 +57,6 @@ Spells:
   - "[[Fire Bolt]]"
 aliases:
   - Fellatia
-Status: Active
 adventures:
   - The Testing of VVunderlore
 spell_mod: Charisma
@@ -127,6 +126,7 @@ dv.paragraph(tableMarkdown);
 ```
 
 # 🧠  Skills
+
 ```dataviewjs
 // List of all D&D skills and their associated abilities
 const skills = {

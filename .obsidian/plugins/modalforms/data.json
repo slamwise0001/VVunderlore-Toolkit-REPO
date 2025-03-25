@@ -1946,6 +1946,620 @@
         }
       ],
       "version": "1"
+    },
+    {
+      "title": "Create a New Player Character",
+      "name": "new-player-character",
+      "fields": [
+        {
+          "name": "Name",
+          "label": "Character Name",
+          "description": "Enter the character's name",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "aliases",
+          "label": "Aliases",
+          "description": "Any shortened names or nicknames",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [],
+            "allowUnknownValues": true,
+            "query": ""
+          }
+        },
+        {
+          "name": "level",
+          "label": "Level",
+          "description": "Enter the character's level",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Alignment",
+          "label": "Alignment",
+          "description": "Select the character's alignment",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": "None"
+              },
+              {
+                "value": "Lawful Good",
+                "label": "Lawful Good"
+              },
+              {
+                "value": "Neutral Good",
+                "label": "Neutral Good"
+              },
+              {
+                "value": "Chaotic Good",
+                "label": "Chaotic Good"
+              },
+              {
+                "value": "Lawful Neutral",
+                "label": "Lawful Neutral"
+              },
+              {
+                "value": "True Neutral",
+                "label": "True Neutral"
+              },
+              {
+                "value": "Chaotic Neutral",
+                "label": "Chaotic Neutral"
+              },
+              {
+                "value": "Lawful Evil",
+                "label": "Lawful Evil"
+              },
+              {
+                "value": "Neutral Evil",
+                "label": "Neutral Evil"
+              },
+              {
+                "value": "Chaotic Evil",
+                "label": "Chaotic Evil"
+              }
+            ]
+          }
+        },
+        {
+          "name": "species",
+          "label": "Species",
+          "description": "Enter the character's species",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "notes",
+            "folder": "Compendium/Species",
+            "options": []
+          }
+        },
+        {
+          "name": "pcclass",
+          "label": "Class",
+          "description": "Enter the character's class",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Artificer",
+                "label": "Artificer"
+              },
+              {
+                "value": "Barbarian",
+                "label": "Barbarian"
+              },
+              {
+                "value": "Bard",
+                "label": "Bard"
+              },
+              {
+                "value": "Cleric",
+                "label": "Cleric"
+              },
+              {
+                "value": "Druid",
+                "label": "Druid"
+              },
+              {
+                "value": "Fighter",
+                "label": "Fighter"
+              },
+              {
+                "value": "Monk",
+                "label": "Monk"
+              },
+              {
+                "value": "Mystic",
+                "label": "Mystic"
+              },
+              {
+                "value": "Paladin",
+                "label": "Paladin"
+              },
+              {
+                "value": "Ranger",
+                "label": "Ranger"
+              },
+              {
+                "value": "Ranger (Revised)",
+                "label": "Ranger (Revised)"
+              },
+              {
+                "value": "Ranger (Spell-less)",
+                "label": "Ranger (Spell-less)"
+              },
+              {
+                "value": "Rogue",
+                "label": "Rogue"
+              },
+              {
+                "value": "Sorcerer",
+                "label": "Sorcerer"
+              },
+              {
+                "value": "Warlock",
+                "label": "Warlock"
+              },
+              {
+                "value": "Wizard",
+                "label": "Wizard"
+              }
+            ]
+          }
+        },
+        {
+          "name": "subclass-cleric",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Cleric"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Cleric/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-artificer",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Artificer"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Artificer/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-barbarian",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Barbarian"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Barbarian/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-Bard",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Bard"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Bard/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-Druid",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Druid"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Druid/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-Fighter",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Fighter"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Fighter/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-Monk",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Monk"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Monk/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-Mystic",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Mystic"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Mystic/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-paladin",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Paladin"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Paladin/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-ranger",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "isExactly",
+            "value": "Ranger"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Ranger/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-ranger revised",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "contains",
+            "value": "Revised"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Ranger (Revised)/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-ranger spelless",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "contains",
+            "value": "Spell-less"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Ranger (Spell-less)/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-rogue",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "startsWith",
+            "value": "Rogue"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Rogue/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-sorcerer",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "startsWith",
+            "value": "Sorcerer"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Sorcerer/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-warlock",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "startsWith",
+            "value": "Warlock"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Warlock/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "subclass-wizard",
+          "label": "Subclass",
+          "description": "Enter the character's subclass",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pcclass",
+            "type": "startsWith",
+            "value": "Wizard"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Compendium/Classes/Wizard/Sub-classes\"')\n  .map(p => p.file.name)\n  .sort();"
+          }
+        },
+        {
+          "name": "hp",
+          "label": "Max Hit Points",
+          "description": "Enter the maximum hit points",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "ac",
+          "label": "Armor Class",
+          "description": "Enter the armor class",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "strength",
+          "label": "Strength",
+          "description": "Enter the Strength score",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "dexterity",
+          "label": "Dexterity",
+          "description": "Enter the Dexterity score",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "constitution",
+          "label": "Constitution",
+          "description": "Enter the Constitution score",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "intelligence",
+          "label": "Intelligence",
+          "description": "Enter the Intelligence score",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "wisdom",
+          "label": "Wisdom",
+          "description": "Enter the Wisdom score",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "charisma",
+          "label": "Charisma",
+          "description": "Enter the Charisma score",
+          "isRequired": false,
+          "input": {
+            "type": "number",
+            "hidden": false
+          }
+        },
+        {
+          "name": "Skill Proficiencies",
+          "label": "Skill Proficiencies",
+          "description": "List the skills the character is proficient in (comma separated)",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Athletics",
+              "Acrobatics",
+              "Sleight of Hand",
+              "Stealth",
+              "Arcana",
+              "History",
+              "Investigation",
+              "Nature",
+              "Religion",
+              "Animal Handling",
+              "Insight",
+              "Medicine",
+              "Perception",
+              "Survival",
+              "Deception",
+              "Intimidation",
+              "Performance",
+              "Persuasion"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "spells",
+          "label": "Spells",
+          "description": "What spells do they know? (type to search)",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Compendium/Spells",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "Languages",
+          "label": "",
+          "description": "What languages does this character speak? (comma separated)",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [],
+            "allowUnknownValues": true,
+            "query": ""
+          }
+        },
+        {
+          "name": "key_items",
+          "label": "Key Items",
+          "description": "Any items you want to remember they have? (comma separated)",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [],
+            "allowUnknownValues": true,
+            "query": ""
+          }
+        },
+        {
+          "name": "Status",
+          "label": "Status",
+          "description": "Is this Player Character ready to play?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              },
+              {
+                "value": "Active",
+                "label": "Active"
+              },
+              {
+                "value": "Inactive",
+                "label": "Inactive"
+              }
+            ]
+          }
+        },
+        {
+          "name": "appearances",
+          "label": "Appears In",
+          "description": "What adventure(s) is this player in?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "Status",
+            "type": "isExactly",
+            "value": "Active"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "Array.from(new Set(\n  dv.pages()\n    .filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1])\n)).sort();",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }

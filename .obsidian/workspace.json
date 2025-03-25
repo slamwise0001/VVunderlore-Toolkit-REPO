@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "Extras/Templates/playercharacter_template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "playercharacter_template"
+            }
+          },
+          {
+            "id": "a9eb718c2c4041dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "World/People/Player Characters/Inactive/Burrata Ensalada.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Burrata Ensalada"
+            }
+          },
+          {
+            "id": "698557a9a067f3e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -195,32 +224,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "26578a02051ee4c3",
+  "active": "698557a9a067f3e2",
   "lastOpenFiles": [
-    "README.md",
-    "Adventures/Omninomicon.md",
     "Welcome.md",
-    "World/People/Factions/Untitled.md",
-    "World/Places/EXAMPLE - Tower of Struug Nur.md",
-    "Extras/Party Overview.md",
-    "Extras/Templates/newplace_template.md",
-    "ENODIR ADVENTURE FIX.md",
-    "Adventures/Cool Fun For Everyone/Cool Fun For Everyone - Adventure Hub.md",
+    "Adventures/Omninomicon.md",
+    "World/People/Player Characters/Inactive/Burrata Ensalada.md",
+    "Extras/Templates/playercharacter_template.md",
+    "Extras/Templates/npc_template.md",
+    "World/People/Player Characters/Active/Munch Tippledew.md",
     "World/People/Player Characters/Active/Chixlum the Handsy.md",
-    "World/Places/TESTING\n.md",
-    "Adventures/Cool Fun For Everyone/Session Notes/Session 1 - 3.21.25.md",
-    "Adventures/Cool Fun For Everyone/Session Notes/Session 2 - 3.28.25.md",
-    "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
-    "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
-    "World/People/Non-Player Characters/Lomin Topplesquirt.md",
-    "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
-    "Adventures/The Testing of VVunderlore/Adventure/Chapter 1 - A Man with a Dream.md",
-    "Extras/Templates/(Cool Fun For Everyone)sessiontemplate.md",
-    "Extras/SYS/The Testing of VVunderlore_summary.md",
-    "Extras/SYS/Cool Fun For Everyone_summary.md",
-    "Extras/Templates/newadventure_template.md",
-    "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
-    "Extras/Templates/(The Testing of VVunderlore)sessiontemplate.md",
+    "Extras/PC Dashboards/dash-Burrata Ensalada.md",
+    "README.md",
+    "Extras/Party Overview.md",
+    "Extras/Templates/playerdash_template.md",
+    "Extras/Templates/statblock_template.md",
+    "World/People/Player Characters/Active/sdfsdf.md",
+    "Compendium/Items/Magical Items/Ring of Invisibility.md",
+    "Compendium/Items/Magical Items/Ring of Protection.md",
+    "Compendium/Items/Magical Items/Rod of the Pact Keeper, +3.md",
+    "Compendium/Items/Magical Items/Staff of the Adder.md",
+    "Compendium/Items/Magical Items/Stone of Controlling Earth Elementals.md",
+    "Compendium/Items/Magical Items/Staff of Striking.md",
+    "Compendium/Items/Magical Items/Staff of the Magi.md",
+    "Compendium/Items/Magical Items/Staff of Withering.md",
+    "Extras/Vermun the Wandering Trader.md",
+    "Compendium/Items/Homebrew Items/Wand of Templating.md",
+    "Compendium/Items/Magical Items/Amulet of the Planes.md",
+    "Compendium/Items/Magical Items/Bag of Devouring.md",
+    "Compendium/Bestiary/Monsters/Adult Bronze Dragon.md",
     "Adventures/Cool Fun For Everyone/Adventure",
     "Adventures/Cool Fun For Everyone/Materials",
     "Adventures/The Testing of VVunderlore/Session Notes",
@@ -229,8 +260,6 @@
     "Adventures/The Testing of VVunderlore/Adventure",
     "Adventures/Cool Fun For Everyone",
     "Adventures/The Testing of VVunderlore",
-    "Adventures/Its An Example/Its An Example - Adventure Hub.md",
-    "Extras/SYS/Another Example_summary.md",
     "Adventures/The Far Side of the Butt/Session Notes",
     "Adventures/The Far Side of the Butt/Materials"
   ]

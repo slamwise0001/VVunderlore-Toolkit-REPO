@@ -31,7 +31,7 @@ dv.table(
 
 ```
  
- `BUTTON[chixlum,Munch]`
+ `BUTTON[chixlum,Munch,Player3,Player4,Player5,Player6,Player7,Player8,Player9,Player10]`
  
 ```meta-bind-button
 label: Chixlum the Handy
@@ -43,8 +43,8 @@ id: chixlum
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 69
-    toLine: 69
+    fromLine: 197
+    toLine: 197
     replacement: |
       ![[dash-Chixlum the Handsy#Chixlum the Handsy]]
       
@@ -59,14 +59,160 @@ id: Munch
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 69
-    toLine: 69
+    fromLine: 197
+    toLine: 197
     replacement: |
       ![[dash-Munch Tippledew#Munch Tippledew]]
       
 ```
+```meta-bind-button
+label: Player 3
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player3
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 4
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player4
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 5
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player5
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 6
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player6
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 7
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player7
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 8
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player8
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 9
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player9
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
+```meta-bind-button
+label: Player 10
+icon: ""
+hidden: true
+class: meta-bind-button
+tooltip: ""
+id: Player10
+style: default
+actions:
+  - type: replaceInNote
+    fromLine: 197
+    toLine: 197
+    replacement: |
+      ![[dash-NAME GOES HERE]]
+      
+```
 >[!info] Player Stats
-![[dash-Munch Tippledew#Munch Tippledew]]
+![[dash-Chixlum the Handsy#Chixlum the Handsy]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -91,6 +91,21 @@ actions:
 })();
 
 ```
+```meta-bind-button
+label: New Player Character!
+icon: ""
+style: destructive
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: Create a New Character
+id: newcreature
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Extras/Templates/playercharacter_template.md
+
+```
 
 >[!success] ## All Active Players
 > ```dataview

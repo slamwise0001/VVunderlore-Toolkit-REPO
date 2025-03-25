@@ -33,7 +33,6 @@ Spells:
 aliases:
   - 3mo
   - Dump
-Status: Active
 adventures:
   - The Testing of VVunderlore
 key_items:
