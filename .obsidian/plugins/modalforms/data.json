@@ -377,8 +377,7 @@
               "Constitution",
               "Wisdom"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -409,8 +408,7 @@
               "Performance",
               "Persuasion"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -436,8 +434,7 @@
               "Slashing",
               "Thunder"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -463,8 +460,7 @@
               "Slashing",
               "Thunder"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -490,8 +486,7 @@
               "Slashing",
               "Thunder"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -512,8 +507,7 @@
               "Poisoned",
               "Stunned"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -530,8 +524,7 @@
               "Tremorsense",
               "Truesight"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -1163,8 +1156,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1]) // Extract first-level folder\n)).sort();",
-            "allowUnknownValues": false,
-            "multi_select_options": []
+            "allowUnknownValues": false
           }
         },
         {
@@ -1205,8 +1197,7 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "World/People/Factions",
-            "options": []
+            "folder": "World/People/Factions"
           }
         },
         {
@@ -1279,8 +1270,7 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "Compendium/Classes",
-            "options": []
+            "folder": "Compendium/Classes"
           }
         },
         {
@@ -1291,8 +1281,7 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "Compendium/Species",
-            "options": []
+            "folder": "Compendium/Species"
           }
         },
         {
@@ -1303,10 +1292,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Compendium/Spells",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "Compendium/Spells"
           }
         },
         {
@@ -1606,8 +1592,7 @@
               "Performance",
               "Persuasion"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -1638,8 +1623,7 @@
               "Slashing",
               "Thunder"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -1670,8 +1654,7 @@
               "Slashing",
               "Thunder"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -1702,8 +1685,7 @@
               "Slashing",
               "Thunder"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -1729,8 +1711,7 @@
               "Poisoned",
               "Stunned"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         }
       ],
@@ -1940,8 +1921,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "Array.from(new Set(\n    dv.pages().filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1]) // Extract first-level folder\n)).sort();",
-            "allowUnknownValues": true,
-            "multi_select_options": []
+            "allowUnknownValues": true
           }
         }
       ],
@@ -1970,8 +1950,7 @@
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -2044,8 +2023,7 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "Compendium/Species",
-            "options": []
+            "folder": "Compendium/Species"
           }
         },
         {
@@ -2472,8 +2450,7 @@
               "Performance",
               "Persuasion"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -2484,10 +2461,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Compendium/Spells",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "Compendium/Spells"
           }
         },
         {
@@ -2499,8 +2473,7 @@
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -2512,8 +2485,7 @@
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -2554,8 +2526,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "Array.from(new Set(\n  dv.pages()\n    .filter(p => p.file.folder.startsWith(\"Adventures/\"))\n    .map(p => p.file.folder.split(\"/\")[1])\n)).sort();",
-            "allowUnknownValues": false,
-            "multi_select_options": []
+            "allowUnknownValues": false
           }
         }
       ],

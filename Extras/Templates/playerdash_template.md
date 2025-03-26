@@ -1,3 +1,4 @@
+## {{PlayerName}}
 ```dataviewjs
 const character = dv.page("World/People/Player Characters/Active/{{PlayerName}}");
 

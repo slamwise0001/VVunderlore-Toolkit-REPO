@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Adventures/Omninomicon.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Omninomicon"
+            }
+          },
+          {
+            "id": "308c6ed2d89d8a86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Welcome.md",
                 "mode": "source",
                 "source": false
@@ -21,7 +35,8 @@
               "title": "Welcome"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,25 +206,28 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-5e-statblocks:Open Creature pane": false,
-      "initiative-tracker:Initiative Tracker Encounter Builder": false,
-      "obsidian-git:Open Git source control": false
+      "initiative-tracker:Initiative Tracker Encounter Builder": false
     }
   },
-  "active": "7a8417feed5c0df5",
+  "active": "308c6ed2d89d8a86",
   "lastOpenFiles": [
-    "Extras/Party Overview.md",
+    "README.md",
     "Welcome.md",
+    "Extras/PC Dashboards/dash-Chixlum the Handsy.md",
+    "Extras/PC Dashboards/dash-Butt LaFleur.md",
+    "World/People/Player Characters/Active/Butt LaFleur.md",
+    "Adventures/Omninomicon.md",
+    "Extras/Templates/playerdash_template.md",
+    "Extras/PC Dashboards/dash-Munch Tippledew.md",
+    "Extras/Party Overview.md",
     "Extras/Templates/playercharacter_template.md",
     "World/People/Player Characters/Inactive/Burrata Ensalada.md",
-    "README.md",
-    "Adventures/Omninomicon.md",
     "Compendium/Bestiary/Homebrew/Test Beast.md",
     "Extras/Templates/newcreature_template.md",
     "Extras/Templates/npc_template.md",
     "World/People/Player Characters/Active/Munch Tippledew.md",
     "World/People/Player Characters/Active/Chixlum the Handsy.md",
     "Extras/PC Dashboards/dash-Burrata Ensalada.md",
-    "Extras/Templates/playerdash_template.md",
     "Extras/Templates/statblock_template.md",
     "World/People/Player Characters/Active/sdfsdf.md",
     "Compendium/Items/Magical Items/Ring of Invisibility.md",
@@ -219,10 +237,6 @@
     "Compendium/Items/Magical Items/Stone of Controlling Earth Elementals.md",
     "Compendium/Items/Magical Items/Staff of Striking.md",
     "Compendium/Items/Magical Items/Staff of the Magi.md",
-    "Compendium/Items/Magical Items/Staff of Withering.md",
-    "Extras/Vermun the Wandering Trader.md",
-    "Compendium/Items/Homebrew Items/Wand of Templating.md",
-    "Compendium/Items/Magical Items/Amulet of the Planes.md",
     "Adventures/Cool Fun For Everyone/Adventure",
     "Adventures/Cool Fun For Everyone/Materials",
     "Adventures/The Testing of VVunderlore/Session Notes",
