@@ -31,7 +31,7 @@ dv.table(
 
 ```
  
- `BUTTON[chixlum,Munch,Player3,Player4,Player5,Player6,Player7,Player8,Player9,Player10]`
+ `BUTTON[Player1,Player2,Player3,Player4,Player5,Player6,Player7,Player8,Player9,Player10]`
  
 ```meta-bind-button
 label: Chixlum the Handy
@@ -39,7 +39,7 @@ icon: ""
 hidden: true
 class: meta-bind-button
 tooltip: ""
-id: chixlum
+id: Player1
 style: default
 actions:
   - type: replaceInNote
@@ -55,7 +55,7 @@ icon: ""
 hidden: true
 class: meta-bind-button
 tooltip: ""
-id: Munch
+id: Player2
 style: default
 actions:
   - type: replaceInNote
@@ -195,6 +195,9 @@ actions:
 ```
 >[!info] Player Stats
 ![[dash-Chixlum the Handsy#Chixlum the Handsy]]
+
+
+
 
 
 
