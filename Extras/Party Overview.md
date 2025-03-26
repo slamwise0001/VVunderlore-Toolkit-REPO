@@ -1,3 +1,5 @@
+
+<center><h1> Party Overview</h1></center>
 ```dataviewjs
 const characters = dv.pages('"World/People/Player Characters/Active"');
 
@@ -43,8 +45,8 @@ id: Player1
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-Chixlum the Handsy#Chixlum the Handsy]]
       
@@ -59,8 +61,8 @@ id: Player2
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-Munch Tippledew#Munch Tippledew]]
       
@@ -75,8 +77,8 @@ id: Player3
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -91,8 +93,8 @@ id: Player4
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -107,8 +109,8 @@ id: Player5
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -123,8 +125,8 @@ id: Player6
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -139,8 +141,8 @@ id: Player7
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -155,8 +157,8 @@ id: Player8
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -171,8 +173,8 @@ id: Player9
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
@@ -187,14 +189,19 @@ id: Player10
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 197
-    toLine: 197
+    fromLine: 199
+    toLine: 199
     replacement: |
       ![[dash-NAME GOES HERE]]
       
 ```
 >[!info] Player Stats
 ![[dash-Chixlum the Handsy#Chixlum the Handsy]]
+
+
+
+
+
 
 
 
