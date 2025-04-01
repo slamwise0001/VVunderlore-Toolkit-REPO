@@ -1,3 +1,4 @@
+## Burrata Ensalada
 ```dataviewjs
 const character = dv.page("World/People/Player Characters/Active/Burrata Ensalada");
 
@@ -56,9 +57,6 @@ if (character) {
         alignment: alignment,
         proficiencies: combinedProfs.join(", ") || "None"
     };
-
-    // Left section with character info and name
-    dv.el("div", "", { style: "flex: 1;" }).innerHTML = `<h2>${character.Name}</h2>`;
 
     // Build the table including the new Passive Perception column
     const infoTable = `

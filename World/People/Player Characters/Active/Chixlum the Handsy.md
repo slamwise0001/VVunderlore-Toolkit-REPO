@@ -38,8 +38,6 @@ Tool Proficiencies:
 Languages:
   - Common
   - Gnomish
-  - Abyssal
-  - Dwarvish
   - Klingon
 Spells:
   - "[[Lightning Bolt]]"

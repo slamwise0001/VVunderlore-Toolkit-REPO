@@ -11,6 +11,12 @@ If you have suggestions as to how I can improve this toolkit or you want to requ
 
 # Changelog
 
+## v1.1.1 - 4.1.25
+- Cleaned up the Party Tracker to make it easier to add/remove buttons
+- Updated playerdash_template file to make the header cleaner. **Now you can have the button file-path be "dash-playername#playername" for a cleaner header in the party tracker. Neat!**
+- Fixed the blank line being created on the party tracker! All of these fixes or improvements were silly mistakes in the first place. Sorry.
+- Moved the Party Tracker and Vermun the Wandering Trader to a new "Tools" folder so it's not hidden in Extras (which should be the "don't need to touch" folder for your vault)
+
 ## v1.1 - 3.24.25
 ##### NEW THINGS AND FIXES:
 - **Player Character Functionality (I am... fully functional)! 

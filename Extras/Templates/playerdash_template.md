@@ -58,9 +58,6 @@ if (character) {
         proficiencies: combinedProfs.join(", ") || "None"
     };
 
-    // Left section with character info and name
-    dv.el("div", "", { style: "flex: 1;" }).innerHTML = `<h2>${character.Name}</h2>`;
-
     // Build the table including the new Passive Perception column
     const infoTable = `
         <table style="width: 100%; border-collapse: collapse;">

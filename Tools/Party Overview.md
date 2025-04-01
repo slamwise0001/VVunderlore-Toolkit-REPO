@@ -18,7 +18,7 @@ function calcPassivePerception(page) {
 dv.table(
     ["Name",  "PP", "AC", "HP (Current/Max)", "Walk Speed", "Alignment", "Languages"],
     characters.map(c => {
-        const name = c.Name || c.file.link;
+        const name = c.Name ? dv.func.link(c.file.path, c.Name) : c.file.link;
         const pp = calcPassivePerception(c);
         const ac = c.ac || "N/A";
         const hpMax = c.hp || "N/A";
@@ -34,9 +34,12 @@ dv.table(
 ```
  
  `BUTTON[Player1,Player2,Player3,Player4,Player5,Player6,Player7,Player8,Player9,Player10]`
+
+>[!info] Player Stats
+![[dash-Chixlum the Handsy#Chixlum the Handsy]]
  
 ```meta-bind-button
-label: Chixlum the Handy
+label: Chixlum the Handsy
 icon: ""
 hidden: true
 class: meta-bind-button
@@ -45,11 +48,9 @@ id: Player1
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-Chixlum the Handsy#Chixlum the Handsy]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-Chixlum the Handsy#Chixlum the Handsy]]"  
 ```
 ```meta-bind-button
 label: Munch Tippledew
@@ -61,11 +62,9 @@ id: Player2
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-Munch Tippledew#Munch Tippledew]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-Munch Tippledew#Munch Tippledew]]"
 ```
 ```meta-bind-button
 label: Player 3
@@ -77,11 +76,9 @@ id: Player3
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 4
@@ -93,11 +90,9 @@ id: Player4
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 5
@@ -109,11 +104,9 @@ id: Player5
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 6
@@ -125,11 +118,9 @@ id: Player6
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 7
@@ -141,11 +132,9 @@ id: Player7
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 8
@@ -157,11 +146,9 @@ id: Player8
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 9
@@ -173,11 +160,9 @@ id: Player9
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
 ```meta-bind-button
 label: Player 10
@@ -189,86 +174,7 @@ id: Player10
 style: default
 actions:
   - type: replaceInNote
-    fromLine: 199
-    toLine: 199
-    replacement: |
-      ![[dash-NAME GOES HERE]]
-      
+    fromLine: 39
+    toLine: 39
+    replacement: "![[dash-NAME GOES HERE]]"
 ```
->[!info] Player Stats
-![[dash-Chixlum the Handsy#Chixlum the Handsy]]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

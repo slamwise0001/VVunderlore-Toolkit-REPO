@@ -31,22 +31,5 @@ Happy world building and game running!
 
 
 
-```meta-bind-button
-label: create a new adventure
-icon: ""
-style: destructive
-class: ""
-cssStyle: ""
-backgroundImage: ""
-tooltip: ""
-id: "newadventure"
-hidden: true
-actions:
-  - type: runTemplaterFile
-    templateFile: Extras/Templates/newadventure_template.md
-
-```
-
-
 
 [^1]: There is some stuff in this vault that you really shouldn't be looking at if you didn't pay for it. Please be sure you've purchased all official content before you lay your eyes on it. I know I did.
