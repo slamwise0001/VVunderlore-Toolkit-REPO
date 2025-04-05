@@ -9,10 +9,6 @@
       "optional": true
     },
     {
-      "path": "Adventures/The Testing of VVunderlore/Materials/.gitkeep.txt",
-      "optional": true
-    },
-    {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
       "optional": true
     },
@@ -29,18 +25,6 @@
       "optional": true
     },
     {
-      "path": "Extras/Images/icons/.gitkeep.txt",
-      "optional": false
-    },
-    {
-      "path": "Extras/Images/NPCs/.gitkeep.txt",
-      "optional": false
-    },
-    {
-      "path": "Extras/Images/Player Characters/.gitkeep.txt",
-      "optional": false
-    },
-    {
       "path": "Extras/PC Dashboards/dash-Burrata Ensalada.md",
       "optional": true
     },
@@ -54,10 +38,6 @@
     },
     {
       "path": "Extras/Scripts/create_adventure.js",
-      "optional": false
-    },
-    {
-      "path": "Extras/SYS/img/.gitkeep.txt",
       "optional": false
     },
     {
@@ -113,7 +93,7 @@
       "optional": false
     },
     {
-      "path": "Resources/.gitkeep.txt",
+      "path": "manifest.json",
       "optional": false
     },
     {
@@ -126,11 +106,7 @@
     },
     {
       "path": "Welcome.md",
-      "optional": false
-    },
-    {
-      "path": "World/People/Factions/.gitkeep.txt",
-      "optional": false
+      "optional": true
     },
     {
       "path": "World/People/Non-Player Characters/Lomin Topplesquirt.md",
@@ -145,20 +121,12 @@
       "optional": true
     },
     {
-      "path": "World/People/Player Characters/Inactive/.gitkeep.txt",
-      "optional": false
-    },
-    {
       "path": "World/People/Player Characters/Inactive/Burrata Ensalada.md",
       "optional": true
     },
     {
       "path": "World/Places/EXAMPLE - Tower of Struug Nur.md",
       "optional": true
-    },
-    {
-      "path": "World/Random Encounters/.gitkeep.txt",
-      "optional": false
     }
   ],
   "folders": [
