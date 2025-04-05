@@ -1,4 +1,4 @@
-// generate-manifest.js
+// generate-manifest.mjs
 import { fileURLToPath } from 'url';
 import { dirname, resolve, join } from 'path';
 import fs from 'fs';

@@ -20,7 +20,7 @@ jobs:
           node-version: '18'
 
       - name: Run manifest generator
-        run: node .scripts/generate-manifest.js
+        run: node .scripts/generate-manifest.mjs
 
       - name: Commit and push if changed
         run: |
