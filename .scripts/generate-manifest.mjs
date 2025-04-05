@@ -21,6 +21,7 @@ const EXCLUDED = new Set([
 	'.gitignore',
 	'.gitattributes',
 	'.scripts',
+	'.gitkeep.txt',
 ]);
 
 const OPTIONAL = new Set([
@@ -47,7 +48,8 @@ const OPTIONAL = new Set([
     "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
     "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
     "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
-    "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md"
+    "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
+    "Welcome.md"
 ]);
 
 const manifest = {
