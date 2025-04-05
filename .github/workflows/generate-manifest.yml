@@ -1,0 +1,34 @@
+# .github/workflows/generate-manifest.yml
+name: Generate Manifest
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run manifest generator
+        run: node .scripts/generate-manifest.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add manifest.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "🔄 Auto-update manifest.json"
+          git push
