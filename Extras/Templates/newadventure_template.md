@@ -247,8 +247,8 @@ if (!players || players.length === 0) {
 const folderPath = "Adventures/${adventureName}/Session Notes";
 
 const extractTakeaways = (content, startHeader, endHeader) => {
-    const startPattern = new RegExp(\`^#+\\s*\${startHeader}\\s*\`, "im");
-    const endPattern = new RegExp(\`^#+\\s*\${endHeader}\\s*\`, "im");
+    const startPattern = new RegExp(`^#+\\s*${startHeader}\\s*`, "im");
+    const endPattern = new RegExp(`^#+\\s*${endHeader}\\s*`, "im");
 
     const startMatch = content.match(startPattern);
     const endMatch = content.match(endPattern);
@@ -258,22 +258,24 @@ const extractTakeaways = (content, startHeader, endHeader) => {
     const startIndex = startMatch.index + startMatch[0].length;
     const endIndex = endMatch ? endMatch.index : content.length;
 
-    return content.slice(startIndex, endIndex).replace(/^(#+.*|Notes last touched.*)$/gim, "").trim() || null;
+    return content
+        .slice(startIndex, endIndex)
+        .replace(/^(#+.*|Notes last touched.*)$/gim, "")
+        .trim() || null;
 };
 
-// Collect notes, extract takeaways, sort them, and build the table
 (async () => {
-    let tableData = await Promise.all(dv.pages(\`"\${folderPath}"\`)
-        .map(async page => {
-            const content = await dv.io.load(page.file.path);
-            const takeaway = content ? extractTakeaways(content, "Takeaways", "Next Session") : null;
-            return takeaway ? [page.file.name, takeaway] : null;
-        }));
+    const pages = dv.pages(`"${folderPath}"`);
+
+    let tableData = await Promise.all(pages.map(async page => {
+        const content = await dv.io.load(page.file.path);
+        const takeaway = content ? extractTakeaways(content, "Takeaways", "Next Session") : null;
+        return takeaway ? [page.file.name, takeaway] : null;
+    }));
 
     tableData = tableData.filter(row => row !== null);
 
     tableData.sort((a, b) => {
-        // Remove optional chaining for compatibility:
         const matchA = a[0].match(/Session (\d+)/);
         const matchB = b[0].match(/Session (\d+)/);
         const sessionNumberA = parseInt(matchA ? matchA[1] : 0, 10);
@@ -283,7 +285,11 @@ const extractTakeaways = (content, startHeader, endHeader) => {
 
     tableData = tableData.slice(0, 5);
 
-    if (tableData.length > 0) dv.table(["Note", "Takeaway"], tableData);
+    if (tableData.length > 0) {
+        dv.table(["Note", "Takeaway"], tableData);
+    } else {
+        dv.paragraph("No matching pages or takeaways found.");
+    }
 })();
 \`\`\`
 `;
