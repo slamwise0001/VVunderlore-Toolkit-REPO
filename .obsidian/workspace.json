@@ -194,10 +194,11 @@
       "initiative-tracker:Initiative Tracker Encounter Builder": false
     }
   },
-  "active": "7a8417feed5c0df5",
+  "active": "f90536da3110a05d",
   "lastOpenFiles": [
-    "Extras/Templates/newadventure_template.md",
+    "Extras/Templates/base_sessiontemplate.md",
     "Welcome.md",
+    "Extras/Templates/newadventure_template.md",
     "README.md",
     "Tools/Party Overview.md",
     "World/People/Player Characters/Active/Chixlum the Handsy.md",
@@ -222,7 +223,6 @@
     "Compendium/Items/Magical Items/Rod of the Pact Keeper, +3.md",
     "Compendium/Items/Magical Items/Staff of the Adder.md",
     "Compendium/Items/Magical Items/Stone of Controlling Earth Elementals.md",
-    "Compendium/Items/Magical Items/Staff of Striking.md",
     "Adventures/Cool Fun For Everyone/Adventure",
     "Adventures/Cool Fun For Everyone/Materials",
     "Adventures/The Testing of VVunderlore/Session Notes",
