@@ -207,7 +207,19 @@
       "optional": false
     },
     {
+      "path": "World/Events",
+      "optional": false
+    },
+    {
       "path": "World/People",
+      "optional": false
+    },
+    {
+      "path": "World/People/Cultures",
+      "optional": false
+    },
+    {
+      "path": "World/People/Deities",
       "optional": false
     },
     {
