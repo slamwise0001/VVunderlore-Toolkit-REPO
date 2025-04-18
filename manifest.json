@@ -2,120 +2,157 @@
   "files": [
     {
       "path": "Adventures/Omninomicon.md",
-      "optional": false,
-      "key": "Omninomicon",
-      "customOverride": true,
-      "displayName": "Omninomicon"
+      "optional": false
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Adventure/Chapter 1 - A Man with a Dream.md",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
+      "optional": true
+    },
+    {
+      "path": "Extras/PC Dashboards/dash-Burrata Ensalada.md",
+      "optional": true
+    },
+    {
+      "path": "Extras/PC Dashboards/dash-Chixlum the Handsy.md",
+      "optional": true
+    },
+    {
+      "path": "Extras/PC Dashboards/dash-Munch Tippledew.md",
+      "optional": true
+    },
+    {
+      "path": "Extras/Scripts/create_adventure.js",
+      "optional": false
+    },
+    {
+      "path": "Extras/SYS/The Testing of VVunderlore_summary.md",
+      "optional": true
+    },
+    {
+      "path": "Extras/Templates/(The Testing of VVunderlore)sessiontemplate.md",
+      "optional": true
     },
     {
       "path": "Extras/Templates/base_sessiontemplate.md",
-      "optional": false,
-      "key": "base_sessiontemplate",
-      "customOverride": true,
-      "displayName": "Stock Session Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/encounter_template.md",
-      "optional": false,
-      "key": "encounter_template",
-      "customOverride": true,
-      "displayName": "Encounter Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/newadventure_template.md",
-      "optional": false,
-      "key": "newadventure_template",
-      "customOverride": true,
-      "displayName": "New Adventure Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/newcreature_template.md",
-      "optional": false,
-      "key": "newcreature_template",
-      "customOverride": true,
-      "displayName": "New Creature Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/newitem_template.md",
-      "optional": false,
-      "key": "newitem_template",
-      "customOverride": true,
-      "displayName": "New Item Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/newplace_template.md",
-      "optional": false,
-      "key": "newplace_template",
-      "customOverride": true,
-      "displayName": "New Place Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/npc_template.md",
-      "optional": false,
-      "key": "npc_template",
-      "customOverride": true,
-      "displayName": "New NPC Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/playercharacter_template.md",
-      "optional": false,
-      "key": "playercharacter_template",
-      "customOverride": true,
-      "displayName": "New PC Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/playerdash_template.md",
-      "optional": false,
-      "key": "playerdash_template",
-      "customOverride": true,
-      "displayName": "Player Dash Template from Party Overview"
+      "optional": false
     },
     {
       "path": "Extras/Templates/statblock_template.md",
-      "optional": false,
-      "key": "statblock_template",
-      "customOverride": true,
-      "displayName": "Statblock Template"
+      "optional": false
     },
     {
       "path": "Extras/Templates/vermunitem_template.md",
-      "optional": false,
-      "key": "vermunitem_template",
-      "customOverride": true,
-      "displayName": "Vermun-specific Item Template"
+      "optional": false
     },
     {
       "path": "manifest.json",
-      "optional": false,
-      "key": "manifest",
-      "customOverride": false
-    },
-    {
-      "path": "Tools/Spellbook.md",
-      "optional": false,
-      "key": "spellbook",
-      "customOverride": true,
-      "displayName": "Spellbook"
+      "optional": false
     },
     {
       "path": "Tools/Party Overview.md",
-      "optional": false,
-      "key": "party_overview",
-      "customOverride": true,
-      "displayName": "Party Overview"
+      "optional": false
+    },
+    {
+      "path": "Tools/Spellbook.md",
+      "optional": false
     },
     {
       "path": "Tools/Vermun the Wandering Trader.md",
-      "optional": true,
-      "key": "vermun_note",
-      "customOverride": true,
-      "displayName": "Vermun the Wandering Trader"
+      "optional": false
+    },
+    {
+      "path": "Welcome.md",
+      "optional": true
+    },
+    {
+      "path": "World/People/Non-Player Characters/Lomin Topplesquirt.md",
+      "optional": true
+    },
+    {
+      "path": "World/People/Player Characters/Active/Chixlum the Handsy.md",
+      "optional": true
+    },
+    {
+      "path": "World/People/Player Characters/Active/Munch Tippledew.md",
+      "optional": true
+    },
+    {
+      "path": "World/People/Player Characters/Inactive/Burrata Ensalada.md",
+      "optional": true
+    },
+    {
+      "path": "World/Places/EXAMPLE - Tower of Struug Nur.md",
+      "optional": true
     }
   ],
   "folders": [
     {
       "path": "Adventures",
       "optional": false
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Adventure",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Materials",
+      "optional": true
+    },
+    {
+      "path": "Adventures/The Testing of VVunderlore/Session Notes",
+      "optional": true
     },
     {
       "path": "Extras",
@@ -171,7 +208,7 @@
     },
     {
       "path": "World/Events",
-      "optional": true
+      "optional": false
     },
     {
       "path": "World/People",
@@ -179,11 +216,11 @@
     },
     {
       "path": "World/People/Cultures",
-      "optional": true
+      "optional": false
     },
     {
       "path": "World/People/Deities",
-      "optional": true
+      "optional": false
     },
     {
       "path": "World/People/Factions",
@@ -211,7 +248,7 @@
     },
     {
       "path": "World/Random Encounters",
-      "optional": true
+      "optional": false
     }
   ]
 }
