@@ -37,10 +37,6 @@
       "optional": true
     },
     {
-      "path": "Extras/Scripts/create_adventure.js",
-      "optional": false
-    },
-    {
       "path": "Extras/SYS/The Testing of VVunderlore_summary.md",
       "optional": true
     },
