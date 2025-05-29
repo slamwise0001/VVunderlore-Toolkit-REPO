@@ -31,3 +31,4 @@ jobs:
           git add manifest.json
           git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Auto-update manifest.json"
           git push
+ 
