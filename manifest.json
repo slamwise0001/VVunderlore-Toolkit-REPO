@@ -2,253 +2,438 @@
   "files": [
     {
       "path": "Adventures/Omninomicon.md",
-      "optional": false
+      "optional": false,
+      "key": "omninomicon",
+      "displayName": "Omninomicon",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Adventure/Chapter 1 - A Man with a Dream.md",
-      "optional": true
+      "optional": true,
+      "key": "advwenturedemo-chapter1",
+      "displayName": "ADVENTURE DEMO - Chapter 1",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-session1",
+      "displayName": "ADVENTURE DEMO - Session 1",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-session2",
+      "displayName": "ADVENTURE DEMO - Session 2",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-session3",
+      "displayName": "ADVENTURE DEMO - Session 3",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-adventurehub",
+      "displayName": "DEMO - Adventure Hub",
+      "requires": []
     },
     {
       "path": "Extras/PC Dashboards/dash-Burrata Ensalada.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-burrataensaladadash",
+      "displayName": "PC DEMO - Burrata Ensalada Dash",
+      "requires": []
     },
     {
       "path": "Extras/PC Dashboards/dash-Chixlum the Handsy.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-chixlumdash",
+      "displayName": "PC DEMO - Chixlum the Handsy Dash",
+      "requires": []
     },
     {
       "path": "Extras/PC Dashboards/dash-Munch Tippledew.md",
-      "optional": true
-    },
-    {
-      "path": "Extras/Scripts/create_adventure.js",
-      "optional": false
+      "optional": true,
+      "key": "adventuredemo-munchdash",
+      "displayName": "PC DEMO - Munch Tippledew Dash",
+      "requires": []
     },
     {
       "path": "Extras/SYS/The Testing of VVunderlore_summary.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo_sessionsummary",
+      "displayName": "ADVENTURE DEMO - Session Summary Helper",
+      "requires": []
     },
     {
       "path": "Extras/Templates/(The Testing of VVunderlore)sessiontemplate.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-sessiontemplate",
+      "displayName": "ADVENTURE DEMO - Session Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/base_sessiontemplate.md",
-      "optional": false
+      "optional": false,
+      "key": "basesessiontemplate",
+      "displayName": "Base Session Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/encounter_template.md",
-      "optional": false
+      "optional": false,
+      "key": "encounterTemplate",
+      "displayName": "Encounter Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/newadventure_template.md",
-      "optional": false
+      "optional": false,
+      "key": "newadventuretemplate",
+      "displayName": "New Adventure Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/newcreature_template.md",
-      "optional": false
+      "optional": false,
+      "key": "creaturetemplate",
+      "displayName": "New Creature Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/newitem_template.md",
-      "optional": false
+      "optional": false,
+      "key": "itemTemplate",
+      "displayName": "New Item Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/newplace_template.md",
-      "optional": false
+      "optional": false,
+      "key": "placeTemplate",
+      "displayName": "New Place Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/npc_template.md",
-      "optional": false
+      "optional": false,
+      "key": "npcTemplate",
+      "displayName": "New NPC Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/playercharacter_template.md",
-      "optional": false
+      "optional": false,
+      "key": "pcTemplate",
+      "displayName": "New PC Template",
+      "requires": [
+        "Extras/Templates/playerdash_template.md"
+      ]
     },
     {
       "path": "Extras/Templates/playerdash_template.md",
-      "optional": false
+      "optional": false,
+      "key": "playerdashTemplate",
+      "displayName": "Player Dashboard Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/statblock_template.md",
-      "optional": false
+      "optional": false,
+      "key": "ITstatblockTemplate",
+      "displayName": "Initiative Tracker Statblock Template",
+      "requires": []
     },
     {
       "path": "Extras/Templates/vermunitem_template.md",
-      "optional": false
-    },
-    {
-      "path": "manifest.json",
-      "optional": false
+      "optional": false,
+      "key": "vermunitemTemplate",
+      "displayName": "Vermun Item Creation Template",
+      "requires": []
     },
     {
       "path": "Tools/Party Overview.md",
-      "optional": false
+      "optional": false,
+      "key": "partytracker",
+      "displayName": "Party Overview Tool",
+      "requires": [
+        "Extras/Templates/playerdash_template.md",
+        "Extras/Templates/playercharacter_template.md"]
     },
     {
       "path": "Tools/Spellbook.md",
-      "optional": false
+      "optional": false,
+      "key": "spellbook",
+      "displayName": "Spellbook Tool",
+      "requires": []
     },
     {
       "path": "Tools/Vermun the Wandering Trader.md",
-      "optional": false
+      "optional": false,
+      "key": "vermuntool",
+      "displayName": "Vermun the Wandering Trader",
+      "requires": [
+        "Extras/Templates/vermunitem_template.md"
+      ]
     },
     {
       "path": "Welcome.md",
-      "optional": true
+      "optional": true,
+      "key": "welcome",
+      "displayName": "Welcome",
+      "requires": []
     },
     {
       "path": "World/People/Non-Player Characters/Lomin Topplesquirt.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-npcLomin",
+      "displayName": "NPC DEMO - Lomin Topplesquirt",
+      "requires": []
     },
     {
       "path": "World/People/Player Characters/Active/Chixlum the Handsy.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-chixlum",
+      "displayName": "PC DEMO - Chixlum the Handsy",
+      "requires": []
     },
     {
       "path": "World/People/Player Characters/Active/Munch Tippledew.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-munch",
+      "displayName": "PC DEMO - Munch Tippledew",
+      "requires": []
     },
     {
       "path": "World/People/Player Characters/Inactive/Burrata Ensalada.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-burrata",
+      "displayName": "PC DEMO - Burrata Ensalada",
+      "requires": []
     },
     {
       "path": "World/Places/EXAMPLE - Tower of Struug Nur.md",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-placeexample",
+      "displayName": "ADVENTURE DEMO - New Place",
+      "requires": []
     }
   ],
   "folders": [
     {
       "path": "Adventures",
-      "optional": false
+      "optional": false,
+      "key": "adventures",
+      "displayName": "All Adventures Folder",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-exadventureFol",
+      "displayName": "ADVENTURE DEMO - Example Adventure Folder",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Adventure",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-exadventureAdventureFol",
+      "displayName": "ADVENTURE DEMO - Story Folder",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Materials",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-exadventureMaterialsFol",
+      "displayName": "ADVENTURE DEMO - Materials Folder",
+      "requires": []
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes",
-      "optional": true
+      "optional": true,
+      "key": "adventuredemo-exadventureSessionNotesFol",
+      "displayName": "ADVENTURE DEMO - Session Notes Folder",
+      "requires": []
     },
     {
       "path": "Extras",
-      "optional": false
+      "optional": false,
+      "key": "extrasFol",
+      "displayName": "Extras Folder",
+      "requires": []
     },
     {
       "path": "Extras/Images",
-      "optional": true
+      "optional": true,
+      "key": "imagesFol",
+      "displayName": "Images Folder",
+      "requires": []
     },
     {
       "path": "Extras/Images/icons",
-      "optional": true
+      "optional": true,
+      "key": "iconsFol",
+      "displayName": "Icons Folder",
+      "requires": []
     },
     {
       "path": "Extras/Images/NPCs",
-      "optional": true
+      "optional": true,
+      "key": "npcpicsFol",
+      "displayName": "NPC Images Folder",
+      "requires": []
     },
     {
       "path": "Extras/Images/Player Characters",
-      "optional": true
+      "optional": true,
+      "key": "pcpicsFol",
+      "displayName": "PC Images Folder",
+      "requires": []
     },
     {
       "path": "Extras/PC Dashboards",
-      "optional": false
+      "optional": false,
+      "key": "pcdashFol",
+      "displayName": "PC Dashboards Folder",
+      "requires": []
     },
     {
       "path": "Extras/Scripts",
-      "optional": false
+      "optional": false,
+      "key": "scriptsFol",
+      "displayName": "Scripts Folder",
+      "requires": []
     },
     {
       "path": "Extras/SYS",
-      "optional": false
+      "optional": false,
+      "key": "sysFol",
+      "displayName": "System Folder",
+      "requires": []
     },
     {
       "path": "Extras/SYS/img",
-      "optional": false
+      "optional": false,
+      "key": "syspicFol",
+      "displayName": "System Images Folder",
+      "requires": []
     },
     {
       "path": "Extras/Templates",
-      "optional": false
+      "optional": false,
+      "key": "templatesFol",
+      "displayName": "Templates Folder",
+      "requires": []
     },
     {
       "path": "Resources",
-      "optional": false
+      "optional": false,
+      "key": "resourcesFol",
+      "displayName": "Resources Folder",
+      "requires": []
     },
     {
       "path": "Tools",
-      "optional": false
+      "optional": false,
+      "key": "toolsFol",
+      "displayName": "Tools Folder",
+      "requires": []
     },
     {
       "path": "World",
-      "optional": false
+      "optional": false,
+      "key": "worldFol",
+      "displayName": "World Folder",
+      "requires": []
     },
     {
       "path": "World/Events",
-      "optional": false
+      "optional": false,
+      "key": "eventsFol",
+      "displayName": "Evens Folder",
+      "requires": []
+    },
+    {
+      "path": "World/History",
+      "optional": false,
+      "key": "historyFol",
+      "displayName": "History Folder",
+      "requires": []
     },
     {
       "path": "World/People",
-      "optional": false
+      "optional": false,
+      "key": "peopleFol",
+      "displayName": "People Folder",
+      "requires": []
     },
     {
       "path": "World/People/Cultures",
-      "optional": false
+      "optional": false,
+      "key": "culturesFol",
+      "displayName": "Cultures Folder",
+      "requires": []
     },
     {
       "path": "World/People/Deities",
-      "optional": false
+      "optional": false,
+      "key": "deitiesFol",
+      "displayName": "Deities Folder",
+      "requires": []
     },
     {
       "path": "World/People/Factions",
-      "optional": false
+      "optional": false,
+      "key": "factionsFol",
+      "displayName": "Factions Folder",
+      "requires": []
     },
     {
       "path": "World/People/Non-Player Characters",
-      "optional": false
+      "optional": false,
+      "key": "npcFol",
+      "displayName": "NPC Folder",
+      "requires": []
     },
     {
       "path": "World/People/Player Characters",
-      "optional": false
+      "optional": false,
+      "key": "pcFol",
+      "displayName": "PC Folder",
+      "requires": []
     },
     {
       "path": "World/People/Player Characters/Active",
-      "optional": false
+      "optional": false,
+      "key": "activepcFol",
+      "displayName": "Active PCs Folder",
+      "requires": []
     },
     {
       "path": "World/People/Player Characters/Inactive",
-      "optional": false
+      "optional": false,
+      "key": "inactivepcFol",
+      "displayName": "Inactive PCs Folder",
+      "requires": []
     },
     {
       "path": "World/Places",
-      "optional": false
+      "optional": false,
+      "key": "placesFol",
+      "displayName": "Places Folder",
+      "requires": []
     },
     {
       "path": "World/Random Encounters",
-      "optional": false
+      "optional": false,
+      "key": "randomencFol",
+      "displayName": "Random Encounter Folder",
+      "requires": []
     }
   ]
 }
