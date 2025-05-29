@@ -2,6 +2,8 @@
 import { fileURLToPath } from 'url';
 import { dirname, resolve, join } from 'path';
 import fs from 'fs';
+import fm from 'front-matter';
+import { basename, extname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -58,28 +60,56 @@ const manifest = {
 };
 
 function walk(dir, relative = '') {
-	const entries = fs.readdirSync(dir, { withFileTypes: true });
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
 
-	for (const entry of entries) {
-		if (EXCLUDED.has(entry.name)) continue;
+  for (const entry of entries) {
+    if (EXCLUDED.has(entry.name)) continue;
 
-		const fullPath = join(dir, entry.name);
-		const relativePath = join(relative, entry.name).replace(/\\/g, '/');
+    const fullPath     = join(dir, entry.name);
+    const relativePath = join(relative, entry.name).replace(/\\/g, '/');
 
-		if (entry.isDirectory()) {
-			manifest.folders.push({
-				path: relativePath,
-				optional: OPTIONAL.has(relativePath)
-			});
-			walk(fullPath, relativePath);
-		} else if (entry.isFile()) {
-			manifest.files.push({
-				path: relativePath,
-				optional: OPTIONAL.has(relativePath)
-			});
-		}
-	}
+    if (entry.isDirectory()) {
+      // Try to read a folder-level frontmatter file if you have one,
+      // otherwise derive from the folder name.
+      const defaultKey  = relativePath.replace(/\//g, '-').toLowerCase();
+      const defaultName = entry.name;
+      let folderAttrs = {};
+
+      // e.g. if you keep a _folder.md inside each folder with front-matter:
+      const fmFile = join(fullPath, '_folder.md');
+      if (fs.existsSync(fmFile)) {
+        const raw = fs.readFileSync(fmFile, 'utf8');
+        folderAttrs = fm(raw).attributes;
+      }
+
+      manifest.folders.push({
+        path:        relativePath,
+        optional:    OPTIONAL.has(relativePath),
+        key:         folderAttrs.key         || defaultKey,
+        displayName: folderAttrs.displayName || defaultName,
+        requires:    folderAttrs.requires    || [],
+      });
+
+      walk(fullPath, relativePath);
+
+    } else if (entry.isFile()) {
+      const raw       = fs.readFileSync(fullPath, 'utf8');
+      const { attributes } = fm(raw);
+
+      const defaultKey  = relativePath.replace(/\//g, '-').replace(/\.[^.]+$/, '').toLowerCase();
+      const defaultName = attributes.title || basename(relativePath, extname(relativePath));
+
+      manifest.files.push({
+        path:        relativePath,
+        optional:    OPTIONAL.has(relativePath),
+        key:         attributes.key         || defaultKey,
+        displayName: attributes.displayName || defaultName,
+        requires:    attributes.requires    || [],
+      });
+    }
+  }
 }
+
 
 walk(ROOT_DIR);
 
