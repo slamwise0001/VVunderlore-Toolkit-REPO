@@ -211,6 +211,10 @@
       "optional": false
     },
     {
+      "path": "World/History",
+      "optional": false
+    },
+    {
       "path": "World/People",
       "optional": false
     },
