@@ -21,7 +21,7 @@ const EXCLUDED = new Set([
   '.gitignore',
   '.gitattributes',
   '.scripts',
-  '.manifest',
+  'manifest.json',
   '.gitkeep.txt',
   // your private WotC IP, demos, etc:
   'Adventures/WotC IP',
@@ -193,23 +193,42 @@ function addCodeMentionsDeps(manifest) {
   }
 }
 
-// ─── 3) Scan any folder mentions (e.g. "Extras/PC Dashboards/") ───────────────────────
+// ─── 3) Scan code/YAML files for folder mentions only ─────────────────────────────────
 function addFolderMentionsDeps(manifest) {
-  // For every file entry, if its content includes "folder/path/", add that folder’s key
-  const folderMap = new Map(manifest.folders.map(f => [f.path + '/', f.key]));
+  // Only scan code and YAML files; skip pure Markdown
+  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml']);
+  // Build a map of folder-path + "/" → folderKey
+  const folderMap = new Map(
+    manifest.folders.map(f => [f.path + '/', f.key])
+  );
+
+  // For each entry (file or folder)
   for (const entry of manifest.folders.concat(manifest.files)) {
-    const fileOnDisk = join(ROOT_DIR, entry.path);
-    if (!fs.existsSync(fileOnDisk) || fs.lstatSync(fileOnDisk).isDirectory()) continue;
-    const content = fs.readFileSync(fileOnDisk, 'utf8');
+    const ext  = extname(entry.path).toLowerCase();
+    const full = join(ROOT_DIR, entry.path);
+    // Skip non-existent, directories, and non-code/YAML files
+    if (
+      !fs.existsSync(full) ||
+      fs.lstatSync(full).isDirectory() ||
+      !CODE_EXTS.has(ext)
+    ) {
+      continue;
+    }
+
+    const content = fs.readFileSync(full, 'utf8');
     const deps    = new Set(entry.requires);
+
+    // If any folder-path/ appears in the code, add that folder’s key
     for (const [folderPathSlash, folderKey] of folderMap) {
       if (content.includes(folderPathSlash)) {
         deps.add(folderKey);
       }
     }
+
     entry.requires = Array.from(deps);
   }
 }
+
 
 
 // ─── Invoke both helpers ─────────────────────────────────────────────────────────────
