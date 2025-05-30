@@ -6,23 +6,7 @@
       "key": "adventures-omninomicon",
       "displayName": "Omninomicon",
       "requires": [
-        "adventures",
-        "extras",
-        "extras-sys",
-        "extras-templates",
-        "world",
-        "world-people",
-        "world-people-non-player characters",
-        "world-people-player characters",
-        "world-people-player characters-active",
-        "world-people-player characters-inactive",
-        "world-places",
-        "extras-templates-newadventure_template",
-        "extras-templates-newcreature_template",
-        "extras-templates-newitem_template",
-        "extras-templates-newplace_template",
-        "extras-templates-npc_template",
-        "extras-templates-playercharacter_template"
+        "adventures"
       ]
     },
     {
@@ -30,7 +14,11 @@
       "optional": true,
       "key": "adventures-the testing of vvunderlore-adventure-chapter 1 - a man with a dream",
       "displayName": "Chapter 1   A Man With A Dream",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-adventure"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 1 - 3.18.25.md",
@@ -40,10 +28,7 @@
       "requires": [
         "adventures",
         "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes",
-        "extras",
-        "extras-templates",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "adventures-the testing of vvunderlore-session notes"
       ]
     },
     {
@@ -54,10 +39,7 @@
       "requires": [
         "adventures",
         "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes",
-        "extras",
-        "extras-templates",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "adventures-the testing of vvunderlore-session notes"
       ]
     },
     {
@@ -68,10 +50,7 @@
       "requires": [
         "adventures",
         "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes",
-        "extras",
-        "extras-templates",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "adventures-the testing of vvunderlore-session notes"
       ]
     },
     {
@@ -81,16 +60,7 @@
       "displayName": "The Testing Of VVunderlore   Adventure Hub",
       "requires": [
         "adventures",
-        "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes",
-        "extras",
-        "extras-templates",
-        "world",
-        "world-people",
-        "world-people-player characters",
-        "world-people-player characters-active",
-        "world-people-player characters-inactive",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "adventures-the testing of vvunderlore"
       ]
     },
     {
@@ -99,10 +69,8 @@
       "key": "extras-pc dashboards-dash-burrata ensalada",
       "displayName": "Dash Burrata Ensalada",
       "requires": [
-        "world",
-        "world-people",
-        "world-people-player characters",
-        "world-people-player characters-active"
+        "extras",
+        "extras-pc dashboards"
       ]
     },
     {
@@ -110,21 +78,30 @@
       "optional": true,
       "key": "extras-pc dashboards-dash-chixlum the handsy",
       "displayName": "Dash Chixlum The Handsy",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-pc dashboards"
+      ]
     },
     {
       "path": "Extras/PC Dashboards/dash-Munch Tippledew.md",
       "optional": true,
       "key": "extras-pc dashboards-dash-munch tippledew",
       "displayName": "Dash Munch Tippledew",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-pc dashboards"
+      ]
     },
     {
       "path": "Extras/SYS/The Testing of VVunderlore_summary.md",
       "optional": true,
       "key": "extras-sys-the testing of vvunderlore_summary",
       "displayName": "The Testing Of VVunderlore Summary",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-sys"
+      ]
     },
     {
       "path": "Extras/Templates/(The Testing of VVunderlore)sessiontemplate.md",
@@ -132,13 +109,8 @@
       "key": "extras-templates-(the testing of vvunderlore)sessiontemplate",
       "displayName": "(The Testing Of VVunderlore)Sessiontemplate",
       "requires": [
-        "adventures",
-        "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes",
         "extras",
-        "extras-sys",
-        "extras-templates",
-        "extras-sys-the testing of vvunderlore_summary"
+        "extras-templates"
       ]
     },
     {
@@ -147,9 +119,7 @@
       "key": "extras-templates-base_sessiontemplate",
       "displayName": "Base Sessiontemplate",
       "requires": [
-        "adventures",
         "extras",
-        "extras-sys",
         "extras-templates"
       ]
     },
@@ -158,7 +128,10 @@
       "optional": false,
       "key": "extras-templates-encounter_template",
       "displayName": "Encounter Template",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-templates"
+      ]
     },
     {
       "path": "Extras/Templates/newadventure_template.md",
@@ -166,11 +139,8 @@
       "key": "extras-templates-newadventure_template",
       "displayName": "Newadventure Template",
       "requires": [
-        "adventures",
         "extras",
-        "extras-sys",
-        "extras-templates",
-        "extras-templates-base_sessiontemplate"
+        "extras-templates"
       ]
     },
     {
@@ -178,7 +148,10 @@
       "optional": false,
       "key": "extras-templates-newcreature_template",
       "displayName": "Newcreature Template",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-templates"
+      ]
     },
     {
       "path": "Extras/Templates/newitem_template.md",
@@ -186,7 +159,8 @@
       "key": "extras-templates-newitem_template",
       "displayName": "Newitem Template",
       "requires": [
-        "tools"
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -195,8 +169,8 @@
       "key": "extras-templates-newplace_template",
       "displayName": "Newplace Template",
       "requires": [
-        "world",
-        "world-places"
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -205,9 +179,8 @@
       "key": "extras-templates-npc_template",
       "displayName": "Npc Template",
       "requires": [
-        "world",
-        "world-people",
-        "world-people-non-player characters"
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -217,12 +190,7 @@
       "displayName": "Playercharacter Template",
       "requires": [
         "extras",
-        "extras-pc dashboards",
-        "extras-templates",
-        "tools",
-        "world",
-        "world-people",
-        "world-people-player characters"
+        "extras-templates"
       ]
     },
     {
@@ -231,10 +199,8 @@
       "key": "extras-templates-playerdash_template",
       "displayName": "Playerdash Template",
       "requires": [
-        "world",
-        "world-people",
-        "world-people-player characters",
-        "world-people-player characters-active"
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -242,14 +208,20 @@
       "optional": false,
       "key": "extras-templates-statblock_template",
       "displayName": "Statblock Template",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-templates"
+      ]
     },
     {
       "path": "Extras/Templates/vermunitem_template.md",
       "optional": false,
       "key": "extras-templates-vermunitem_template",
       "displayName": "Vermunitem Template",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-templates"
+      ]
     },
     {
       "path": "manifest.json",
@@ -326,10 +298,7 @@
       "key": "tools-party overview",
       "displayName": "Party Overview",
       "requires": [
-        "world",
-        "world-people",
-        "world-people-player characters",
-        "world-people-player characters-active"
+        "tools"
       ]
     },
     {
@@ -337,7 +306,9 @@
       "optional": false,
       "key": "tools-spellbook",
       "displayName": "Spellbook",
-      "requires": []
+      "requires": [
+        "tools"
+      ]
     },
     {
       "path": "Tools/Vermun the Wandering Trader.md",
@@ -345,9 +316,7 @@
       "key": "tools-vermun the wandering trader",
       "displayName": "Vermun The Wandering Trader",
       "requires": [
-        "extras",
-        "extras-templates",
-        "extras-templates-newitem_template"
+        "tools"
       ]
     },
     {
@@ -362,7 +331,11 @@
       "optional": true,
       "key": "world-people-non-player characters-lomin topplesquirt",
       "displayName": "Lomin Topplesquirt",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-non-player characters"
+      ]
     },
     {
       "path": "World/People/Player Characters/Active/Chixlum the Handsy.md",
@@ -370,7 +343,10 @@
       "key": "world-people-player characters-active-chixlum the handsy",
       "displayName": "Chixlum The Handsy",
       "requires": [
-        "tools"
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
       ]
     },
     {
@@ -379,7 +355,10 @@
       "key": "world-people-player characters-active-munch tippledew",
       "displayName": "Munch Tippledew",
       "requires": [
-        "tools"
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
       ]
     },
     {
@@ -387,14 +366,22 @@
       "optional": true,
       "key": "world-people-player characters-inactive-burrata ensalada",
       "displayName": "Burrata Ensalada",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-inactive"
+      ]
     },
     {
       "path": "World/Places/EXAMPLE - Tower of Struug Nur.md",
       "optional": true,
       "key": "world-places-example - tower of struug nur",
       "displayName": "EXAMPLE   Tower Of Struug Nur",
-      "requires": []
+      "requires": [
+        "world",
+        "world-places"
+      ]
     }
   ],
   "folders": [
@@ -410,28 +397,39 @@
       "optional": true,
       "key": "adventures-the testing of vvunderlore",
       "displayName": "The Testing Of VVunderlore",
-      "requires": []
+      "requires": [
+        "adventures"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Adventure",
       "optional": true,
       "key": "adventures-the testing of vvunderlore-adventure",
       "displayName": "Adventure",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Materials",
       "optional": true,
       "key": "adventures-the testing of vvunderlore-materials",
       "displayName": "Materials",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes",
       "optional": true,
       "key": "adventures-the testing of vvunderlore-session notes",
       "displayName": "Session Notes",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore"
+      ]
     },
     {
       "path": "Extras",
@@ -445,63 +443,85 @@
       "optional": true,
       "key": "extras-images",
       "displayName": "Images",
-      "requires": []
+      "requires": [
+        "extras"
+      ]
     },
     {
       "path": "Extras/Images/icons",
       "optional": true,
       "key": "extras-images-icons",
       "displayName": "Icons",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-images"
+      ]
     },
     {
       "path": "Extras/Images/NPCs",
       "optional": true,
       "key": "extras-images-npcs",
       "displayName": "NPCs",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-images"
+      ]
     },
     {
       "path": "Extras/Images/Player Characters",
       "optional": true,
       "key": "extras-images-player characters",
       "displayName": "Player Characters",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-images"
+      ]
     },
     {
       "path": "Extras/PC Dashboards",
       "optional": false,
       "key": "extras-pc dashboards",
       "displayName": "PC Dashboards",
-      "requires": []
+      "requires": [
+        "extras"
+      ]
     },
     {
       "path": "Extras/Scripts",
       "optional": false,
       "key": "extras-scripts",
       "displayName": "Scripts",
-      "requires": []
+      "requires": [
+        "extras"
+      ]
     },
     {
       "path": "Extras/SYS",
       "optional": false,
       "key": "extras-sys",
       "displayName": "SYS",
-      "requires": []
+      "requires": [
+        "extras"
+      ]
     },
     {
       "path": "Extras/SYS/img",
       "optional": false,
       "key": "extras-sys-img",
       "displayName": "Img",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-sys"
+      ]
     },
     {
       "path": "Extras/Templates",
       "optional": false,
       "key": "extras-templates",
       "displayName": "Templates",
-      "requires": []
+      "requires": [
+        "extras"
+      ]
     },
     {
       "path": "Resources",
@@ -529,84 +549,117 @@
       "optional": false,
       "key": "world-events",
       "displayName": "Events",
-      "requires": []
+      "requires": [
+        "world"
+      ]
     },
     {
       "path": "World/History",
       "optional": false,
       "key": "world-history",
       "displayName": "History",
-      "requires": []
+      "requires": [
+        "world"
+      ]
     },
     {
       "path": "World/People",
       "optional": false,
       "key": "world-people",
       "displayName": "People",
-      "requires": []
+      "requires": [
+        "world"
+      ]
     },
     {
       "path": "World/People/Cultures",
       "optional": false,
       "key": "world-people-cultures",
       "displayName": "Cultures",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people"
+      ]
     },
     {
       "path": "World/People/Deities",
       "optional": false,
       "key": "world-people-deities",
       "displayName": "Deities",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people"
+      ]
     },
     {
       "path": "World/People/Factions",
       "optional": false,
       "key": "world-people-factions",
       "displayName": "Factions",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people"
+      ]
     },
     {
       "path": "World/People/Non-Player Characters",
       "optional": false,
       "key": "world-people-non-player characters",
       "displayName": "Non Player Characters",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people"
+      ]
     },
     {
       "path": "World/People/Player Characters",
       "optional": false,
       "key": "world-people-player characters",
       "displayName": "Player Characters",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people"
+      ]
     },
     {
       "path": "World/People/Player Characters/Active",
       "optional": false,
       "key": "world-people-player characters-active",
       "displayName": "Active",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-player characters"
+      ]
     },
     {
       "path": "World/People/Player Characters/Inactive",
       "optional": false,
       "key": "world-people-player characters-inactive",
       "displayName": "Inactive",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-player characters"
+      ]
     },
     {
       "path": "World/Places",
       "optional": false,
       "key": "world-places",
       "displayName": "Places",
-      "requires": []
+      "requires": [
+        "world"
+      ]
     },
     {
       "path": "World/Random Encounters",
       "optional": false,
       "key": "world-random encounters",
       "displayName": "Random Encounters",
-      "requires": []
+      "requires": [
+        "world"
+      ]
     }
   ]
 }
