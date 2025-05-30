@@ -125,31 +125,68 @@ walk(ROOT_DIR);
 manifest.files.sort  ((a, b) => a.path.localeCompare(b.path));
 manifest.folders.sort((a, b) => a.path.localeCompare(b.path));
 
-// ─── Auto-fill requires[] by scanning each file for other manifest paths ───────────────────────
-function fillRequiresByMentions(entries) {
-  // Reset all requires[]
-  for (const e of entries) {
-    e.requires = [];
-  }
-  // For each entry, if its file mentions another entry.path, add that entry.key as a dependency
-  for (const e of entries) {
-    const diskPath = join(ROOT_DIR, e.path);
-    // Skip if not a file
-    if (!fs.existsSync(diskPath) || fs.lstatSync(diskPath).isDirectory()) continue;
-    const content = fs.readFileSync(diskPath, 'utf8');
-    for (const other of entries) {
-      if (other.path === e.path) continue;
-      if (content.includes(other.path)) {
-        e.requires.push(other.key);
-      }
+// ─── 1) Add parent-folder dependencies ────────────────────────────────────────────
+function addParentDeps(manifest) {
+  // Map folder paths → keys
+  const folderMap = new Map(manifest.folders.map(f => [f.path, f.key]));
+
+  // For every entry (folder or file), walk its path segments
+  for (const entry of manifest.folders.concat(manifest.files)) {
+    // Start with any existing requires
+    const deps = new Set(entry.requires);
+
+    // Split "Extras/Templates/foo.md" → ["Extras","Templates","foo.md"] then drop last
+    const parts = entry.path.split('/').slice(0, -1);
+    let acc = '';
+    for (const segment of parts) {
+      acc = acc ? `${acc}/${segment}` : segment;
+      const parentKey = folderMap.get(acc);
+      if (parentKey) deps.add(parentKey);
     }
+
+    entry.requires = Array.from(deps);
   }
 }
 
-// Combine files + folders into one list:
-const allEntries = manifest.folders.concat(manifest.files);
-fillRequiresByMentions(allEntries);
-// ──────────────────────────────────────────────────────────────────────────────────────────────
+// ─── 2) Scan code & YAML files for quoted-path mentions ─────────────────────────────
+function addCodeMentionsDeps(manifest) {
+  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml']);
+  const escapeRx  = s => s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+
+  // Map every path → key for quick lookup
+  const pathMap = new Map(
+    manifest.folders.concat(manifest.files).map(e => [e.path, e.key])
+  );
+
+  for (const entry of manifest.folders.concat(manifest.files)) {
+    const ext = extname(entry.path).toLowerCase();
+    const full = join(ROOT_DIR, entry.path);
+
+    // Only scan existing files with code/YAML extensions
+    if (!fs.existsSync(full) || fs.lstatSync(full).isDirectory() || !CODE_EXTS.has(ext)) {
+      continue;
+    }
+
+    const content = fs.readFileSync(full, 'utf8');
+    const deps    = new Set(entry.requires);
+
+    // Look for "path/to/other.md" or 'path/to/other.md' or `path/to/other.md`
+    for (const [otherPath, otherKey] of pathMap) {
+      if (otherPath === entry.path) continue;
+      const rx = new RegExp(`[\\'"\\\`]\\s*${escapeRx(otherPath)}\\s*[\\'"\\\`]`);
+      if (rx.test(content)) {
+        deps.add(otherKey);
+      }
+    }
+
+    entry.requires = Array.from(deps);
+  }
+}
+
+// ─── Invoke both helpers ─────────────────────────────────────────────────────────────
+addParentDeps(manifest);
+addCodeMentionsDeps(manifest);
+// ──────────────────────────────────────────────────────────────────────────────────────
 
 
 // Write to disk
