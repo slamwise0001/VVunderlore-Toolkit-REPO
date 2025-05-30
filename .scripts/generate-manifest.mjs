@@ -170,7 +170,7 @@ function addCodeMentionsDeps(manifest) {
 
 // ─── 3) Folder mentions in code/YAML only ──────────────────────────
 function addFolderMentionsDeps(manifest) {
-  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml']);
+  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml', '.md']);
   const folderMap = new Map(manifest.folders.map(f => [f.path + '/', f.key]));
 
   for (const e of manifest.folders.concat(manifest.files)) {
