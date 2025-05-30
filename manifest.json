@@ -6,7 +6,12 @@
       "key": "adventures-omninomicon",
       "displayName": "Omninomicon",
       "requires": [
-        "adventures"
+        "adventures",
+        "extras-sys",
+        "world-people-non-player characters",
+        "world-people-player characters-active",
+        "world-people-player characters-inactive",
+        "world-places"
       ]
     },
     {
@@ -28,7 +33,8 @@
       "requires": [
         "adventures",
         "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes"
+        "adventures-the testing of vvunderlore-session notes",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
       ]
     },
     {
@@ -39,7 +45,8 @@
       "requires": [
         "adventures",
         "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes"
+        "adventures-the testing of vvunderlore-session notes",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
       ]
     },
     {
@@ -50,7 +57,8 @@
       "requires": [
         "adventures",
         "adventures-the testing of vvunderlore",
-        "adventures-the testing of vvunderlore-session notes"
+        "adventures-the testing of vvunderlore-session notes",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
       ]
     },
     {
@@ -60,7 +68,11 @@
       "displayName": "The Testing Of VVunderlore   Adventure Hub",
       "requires": [
         "adventures",
-        "adventures-the testing of vvunderlore"
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-session notes",
+        "world-people-player characters-active",
+        "world-people-player characters-inactive",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
       ]
     },
     {
@@ -110,7 +122,9 @@
       "displayName": "(The Testing Of VVunderlore)Sessiontemplate",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras-sys-the testing of vvunderlore_summary"
       ]
     },
     {
@@ -140,7 +154,8 @@
       "displayName": "Newadventure Template",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "extras-templates-base_sessiontemplate"
       ]
     },
     {
@@ -190,7 +205,8 @@
       "displayName": "Playercharacter Template",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "extras-templates-playerdash_template"
       ]
     },
     {
@@ -229,7 +245,8 @@
       "key": "tools-party overview",
       "displayName": "Party Overview",
       "requires": [
-        "tools"
+        "tools",
+        "world-people-player characters-active"
       ]
     },
     {
