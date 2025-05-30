@@ -313,13 +313,6 @@
       ]
     },
     {
-      "path": "Welcome.md",
-      "optional": true,
-      "key": "welcome",
-      "displayName": "Welcome",
-      "requires": []
-    },
-    {
       "path": "World/People/Non-Player Characters/Lomin Topplesquirt.md",
       "optional": true,
       "key": "world-people-non-player characters-lomin topplesquirt",
@@ -433,7 +426,7 @@
     },
     {
       "path": "Extras/Images",
-      "optional": true,
+      "optional": false,
       "key": "extras-images",
       "displayName": "Images",
       "requires": [
@@ -442,7 +435,7 @@
     },
     {
       "path": "Extras/Images/icons",
-      "optional": true,
+      "optional": false,
       "key": "extras-images-icons",
       "displayName": "Icons",
       "requires": [
@@ -452,7 +445,7 @@
     },
     {
       "path": "Extras/Images/NPCs",
-      "optional": true,
+      "optional": false,
       "key": "extras-images-npcs",
       "displayName": "NPCs",
       "requires": [
@@ -462,7 +455,7 @@
     },
     {
       "path": "Extras/Images/Player Characters",
-      "optional": true,
+      "optional": false,
       "key": "extras-images-player characters",
       "displayName": "Player Characters",
       "requires": [
