@@ -11,7 +11,12 @@
         "world-people-non-player characters",
         "world-people-player characters-active",
         "world-people-player characters-inactive",
-        "world-places"
+        "world-places",
+        "extras",
+        "extras-templates",
+        "world",
+        "world-people",
+        "world-people-player characters"
       ]
     },
     {
@@ -34,7 +39,9 @@
         "adventures",
         "adventures-the testing of vvunderlore",
         "adventures-the testing of vvunderlore-session notes",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "extras-templates-(the testing of vvunderlore)sessiontemplate",
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -46,7 +53,9 @@
         "adventures",
         "adventures-the testing of vvunderlore",
         "adventures-the testing of vvunderlore-session notes",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "extras-templates-(the testing of vvunderlore)sessiontemplate",
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -58,7 +67,9 @@
         "adventures",
         "adventures-the testing of vvunderlore",
         "adventures-the testing of vvunderlore-session notes",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "extras-templates-(the testing of vvunderlore)sessiontemplate",
+        "extras",
+        "extras-templates"
       ]
     },
     {
@@ -72,7 +83,12 @@
         "adventures-the testing of vvunderlore-session notes",
         "world-people-player characters-active",
         "world-people-player characters-inactive",
-        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+        "extras-templates-(the testing of vvunderlore)sessiontemplate",
+        "extras",
+        "extras-templates",
+        "world",
+        "world-people",
+        "world-people-player characters"
       ]
     },
     {
@@ -82,7 +98,11 @@
       "displayName": "Dash Burrata Ensalada",
       "requires": [
         "extras",
-        "extras-pc dashboards"
+        "extras-pc dashboards",
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
       ]
     },
     {
@@ -124,7 +144,10 @@
         "extras",
         "extras-templates",
         "adventures-the testing of vvunderlore-session notes",
-        "extras-sys-the testing of vvunderlore_summary"
+        "extras-sys-the testing of vvunderlore_summary",
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "extras-sys"
       ]
     },
     {
@@ -134,7 +157,9 @@
       "displayName": "Base Sessiontemplate",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "adventures",
+        "extras-sys"
       ]
     },
     {
@@ -155,7 +180,9 @@
       "requires": [
         "extras",
         "extras-templates",
-        "extras-templates-base_sessiontemplate"
+        "extras-templates-base_sessiontemplate",
+        "adventures",
+        "extras-sys"
       ]
     },
     {
@@ -185,7 +212,9 @@
       "displayName": "Newplace Template",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "world",
+        "world-places"
       ]
     },
     {
@@ -195,7 +224,10 @@
       "displayName": "Npc Template",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "world",
+        "world-people",
+        "world-people-non-player characters"
       ]
     },
     {
@@ -206,7 +238,11 @@
       "requires": [
         "extras",
         "extras-templates",
-        "extras-templates-playerdash_template"
+        "extras-templates-playerdash_template",
+        "extras-pc dashboards",
+        "world",
+        "world-people",
+        "world-people-player characters"
       ]
     },
     {
@@ -216,7 +252,11 @@
       "displayName": "Playerdash Template",
       "requires": [
         "extras",
-        "extras-templates"
+        "extras-templates",
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
       ]
     },
     {
@@ -246,7 +286,10 @@
       "displayName": "Party Overview",
       "requires": [
         "tools",
-        "world-people-player characters-active"
+        "world-people-player characters-active",
+        "world",
+        "world-people",
+        "world-people-player characters"
       ]
     },
     {
@@ -264,7 +307,9 @@
       "key": "tools-vermun the wandering trader",
       "displayName": "Vermun The Wandering Trader",
       "requires": [
-        "tools"
+        "tools",
+        "extras",
+        "extras-templates"
       ]
     },
     {
