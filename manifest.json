@@ -5,7 +5,25 @@
       "optional": false,
       "key": "adventures-omninomicon",
       "displayName": "Omninomicon",
-      "requires": []
+      "requires": [
+        "adventures",
+        "extras",
+        "extras-sys",
+        "extras-templates",
+        "world",
+        "world-people",
+        "world-people-non-player characters",
+        "world-people-player characters",
+        "world-people-player characters-active",
+        "world-people-player characters-inactive",
+        "world-places",
+        "extras-templates-newadventure_template",
+        "extras-templates-newcreature_template",
+        "extras-templates-newitem_template",
+        "extras-templates-newplace_template",
+        "extras-templates-npc_template",
+        "extras-templates-playercharacter_template"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Adventure/Chapter 1 - A Man with a Dream.md",
@@ -19,35 +37,73 @@
       "optional": true,
       "key": "adventures-the testing of vvunderlore-session notes-session 1 - 3.18.25",
       "displayName": "Session 1   3.18.25",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras",
+        "extras-templates",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
       "optional": true,
       "key": "adventures-the testing of vvunderlore-session notes-session 2 - 3.19.25",
       "displayName": "Session 2   3.19.25",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras",
+        "extras-templates",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
       "optional": true,
       "key": "adventures-the testing of vvunderlore-session notes-session 3 - 2.25.25",
       "displayName": "Session 3   2.25.25",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras",
+        "extras-templates",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+      ]
     },
     {
       "path": "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
       "optional": true,
       "key": "adventures-the testing of vvunderlore-the testing of vvunderlore - adventure hub",
       "displayName": "The Testing Of VVunderlore   Adventure Hub",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras",
+        "extras-templates",
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active",
+        "world-people-player characters-inactive",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate"
+      ]
     },
     {
       "path": "Extras/PC Dashboards/dash-Burrata Ensalada.md",
       "optional": true,
       "key": "extras-pc dashboards-dash-burrata ensalada",
       "displayName": "Dash Burrata Ensalada",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
+      ]
     },
     {
       "path": "Extras/PC Dashboards/dash-Chixlum the Handsy.md",
@@ -75,14 +131,27 @@
       "optional": true,
       "key": "extras-templates-(the testing of vvunderlore)sessiontemplate",
       "displayName": "(The Testing Of VVunderlore)Sessiontemplate",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras",
+        "extras-sys",
+        "extras-templates",
+        "extras-sys-the testing of vvunderlore_summary"
+      ]
     },
     {
       "path": "Extras/Templates/base_sessiontemplate.md",
       "optional": false,
       "key": "extras-templates-base_sessiontemplate",
       "displayName": "Base Sessiontemplate",
-      "requires": []
+      "requires": [
+        "adventures",
+        "extras",
+        "extras-sys",
+        "extras-templates"
+      ]
     },
     {
       "path": "Extras/Templates/encounter_template.md",
@@ -96,7 +165,13 @@
       "optional": false,
       "key": "extras-templates-newadventure_template",
       "displayName": "Newadventure Template",
-      "requires": []
+      "requires": [
+        "adventures",
+        "extras",
+        "extras-sys",
+        "extras-templates",
+        "extras-templates-base_sessiontemplate"
+      ]
     },
     {
       "path": "Extras/Templates/newcreature_template.md",
@@ -110,35 +185,57 @@
       "optional": false,
       "key": "extras-templates-newitem_template",
       "displayName": "Newitem Template",
-      "requires": []
+      "requires": [
+        "tools"
+      ]
     },
     {
       "path": "Extras/Templates/newplace_template.md",
       "optional": false,
       "key": "extras-templates-newplace_template",
       "displayName": "Newplace Template",
-      "requires": []
+      "requires": [
+        "world",
+        "world-places"
+      ]
     },
     {
       "path": "Extras/Templates/npc_template.md",
       "optional": false,
       "key": "extras-templates-npc_template",
       "displayName": "Npc Template",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-non-player characters"
+      ]
     },
     {
       "path": "Extras/Templates/playercharacter_template.md",
       "optional": false,
       "key": "extras-templates-playercharacter_template",
       "displayName": "Playercharacter Template",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-pc dashboards",
+        "extras-templates",
+        "tools",
+        "world",
+        "world-people",
+        "world-people-player characters"
+      ]
     },
     {
       "path": "Extras/Templates/playerdash_template.md",
       "optional": false,
       "key": "extras-templates-playerdash_template",
       "displayName": "Playerdash Template",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
+      ]
     },
     {
       "path": "Extras/Templates/statblock_template.md",
@@ -159,14 +256,81 @@
       "optional": false,
       "key": "manifest",
       "displayName": "Manifest",
-      "requires": []
+      "requires": [
+        "adventures",
+        "adventures-the testing of vvunderlore",
+        "adventures-the testing of vvunderlore-adventure",
+        "adventures-the testing of vvunderlore-materials",
+        "adventures-the testing of vvunderlore-session notes",
+        "extras",
+        "extras-images",
+        "extras-images-icons",
+        "extras-images-npcs",
+        "extras-images-player characters",
+        "extras-pc dashboards",
+        "extras-scripts",
+        "extras-sys",
+        "extras-sys-img",
+        "extras-templates",
+        "resources",
+        "tools",
+        "world",
+        "world-events",
+        "world-history",
+        "world-people",
+        "world-people-cultures",
+        "world-people-deities",
+        "world-people-factions",
+        "world-people-non-player characters",
+        "world-people-player characters",
+        "world-people-player characters-active",
+        "world-people-player characters-inactive",
+        "world-places",
+        "world-random encounters",
+        "adventures-omninomicon",
+        "adventures-the testing of vvunderlore-adventure-chapter 1 - a man with a dream",
+        "adventures-the testing of vvunderlore-session notes-session 1 - 3.18.25",
+        "adventures-the testing of vvunderlore-session notes-session 2 - 3.19.25",
+        "adventures-the testing of vvunderlore-session notes-session 3 - 2.25.25",
+        "adventures-the testing of vvunderlore-the testing of vvunderlore - adventure hub",
+        "extras-pc dashboards-dash-burrata ensalada",
+        "extras-pc dashboards-dash-chixlum the handsy",
+        "extras-pc dashboards-dash-munch tippledew",
+        "extras-sys-the testing of vvunderlore_summary",
+        "extras-templates-(the testing of vvunderlore)sessiontemplate",
+        "extras-templates-base_sessiontemplate",
+        "extras-templates-encounter_template",
+        "extras-templates-newadventure_template",
+        "extras-templates-newcreature_template",
+        "extras-templates-newitem_template",
+        "extras-templates-newplace_template",
+        "extras-templates-npc_template",
+        "extras-templates-playercharacter_template",
+        "extras-templates-playerdash_template",
+        "extras-templates-statblock_template",
+        "extras-templates-vermunitem_template",
+        "tools-party overview",
+        "tools-spellbook",
+        "tools-vermun the wandering trader",
+        "welcome",
+        "world-people-non-player characters-lomin topplesquirt",
+        "world-people-player characters-active-chixlum the handsy",
+        "world-people-player characters-active-munch tippledew",
+        "world-people-player characters-inactive-burrata ensalada",
+        "world-places-example - tower of struug nur"
+      ]
     },
     {
       "path": "Tools/Party Overview.md",
       "optional": false,
       "key": "tools-party overview",
       "displayName": "Party Overview",
-      "requires": []
+      "requires": [
+        "world",
+        "world-people",
+        "world-people-player characters",
+        "world-people-player characters-active"
+      ]
     },
     {
       "path": "Tools/Spellbook.md",
@@ -180,7 +344,11 @@
       "optional": false,
       "key": "tools-vermun the wandering trader",
       "displayName": "Vermun The Wandering Trader",
-      "requires": []
+      "requires": [
+        "extras",
+        "extras-templates",
+        "extras-templates-newitem_template"
+      ]
     },
     {
       "path": "Welcome.md",
@@ -201,14 +369,18 @@
       "optional": true,
       "key": "world-people-player characters-active-chixlum the handsy",
       "displayName": "Chixlum The Handsy",
-      "requires": []
+      "requires": [
+        "tools"
+      ]
     },
     {
       "path": "World/People/Player Characters/Active/Munch Tippledew.md",
       "optional": true,
       "key": "world-people-player characters-active-munch tippledew",
       "displayName": "Munch Tippledew",
-      "requires": []
+      "requires": [
+        "tools"
+      ]
     },
     {
       "path": "World/People/Player Characters/Inactive/Burrata Ensalada.md",
