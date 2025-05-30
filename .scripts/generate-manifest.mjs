@@ -125,6 +125,33 @@ walk(ROOT_DIR);
 manifest.files.sort  ((a, b) => a.path.localeCompare(b.path));
 manifest.folders.sort((a, b) => a.path.localeCompare(b.path));
 
+// ─── Auto-fill requires[] by scanning each file for other manifest paths ───────────────────────
+function fillRequiresByMentions(entries) {
+  // Reset all requires[]
+  for (const e of entries) {
+    e.requires = [];
+  }
+  // For each entry, if its file mentions another entry.path, add that entry.key as a dependency
+  for (const e of entries) {
+    const diskPath = join(ROOT_DIR, e.path);
+    // Skip if not a file
+    if (!fs.existsSync(diskPath) || fs.lstatSync(diskPath).isDirectory()) continue;
+    const content = fs.readFileSync(diskPath, 'utf8');
+    for (const other of entries) {
+      if (other.path === e.path) continue;
+      if (content.includes(other.path)) {
+        e.requires.push(other.key);
+      }
+    }
+  }
+}
+
+// Combine files + folders into one list:
+const allEntries = manifest.folders.concat(manifest.files);
+fillRequiresByMentions(allEntries);
+// ──────────────────────────────────────────────────────────────────────────────────────────────
+
+
 // Write to disk
 fs.writeFileSync(OUTPUT_PATH, JSON.stringify(manifest, null, 2), 'utf8');
 console.log(`✅ Generated manifest with ${manifest.files.length} files and ${manifest.folders.length} folders.`);
