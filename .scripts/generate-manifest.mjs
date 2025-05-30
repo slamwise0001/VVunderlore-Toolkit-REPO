@@ -21,6 +21,7 @@ const EXCLUDED = new Set([
   '.gitignore',
   '.gitattributes',
   '.scripts',
+  '.manifest',
   '.gitkeep.txt',
   // your private WotC IP, demos, etc:
   'Adventures/WotC IP',
@@ -172,15 +173,40 @@ function addCodeMentionsDeps(manifest) {
 
     for (const [otherPath, otherKey] of pathMap) {
       if (otherPath === entry.path) continue;
-      // match (path/to/file.md) or "path/to/file.md" or '…' or `…`
-      const rx = new RegExp(
-        `(?:["'\\(\\\`])\\s*${escapeRx(otherPath)}\\s*(?:["'\\)\\\`])`
-      );
+
+      // Split off the extension (e.g. ".md")
+      const ext   = extname(otherPath);
+      const base  = otherPath.slice(0, -ext.length);
+
+      // Build a regex that matches:
+      //   (base) or (base.ext), inside quotes, backticks, or parentheses
+      const pat = `(?:["'\\(\\\`])` +           // opening delimiter
+                  `\\s*${escapeRx(base)}(?:${escapeRx(ext)})?` + // base + optional ext
+                  `\\s*(?:["'\\)\\\`])`;         // closing delimiter
+
+      const rx = new RegExp(pat);
       if (rx.test(content)) {
         deps.add(otherKey);
       }
     }
+    entry.requires = Array.from(deps);
+  }
+}
 
+// ─── 3) Scan any folder mentions (e.g. "Extras/PC Dashboards/") ───────────────────────
+function addFolderMentionsDeps(manifest) {
+  // For every file entry, if its content includes "folder/path/", add that folder’s key
+  const folderMap = new Map(manifest.folders.map(f => [f.path + '/', f.key]));
+  for (const entry of manifest.folders.concat(manifest.files)) {
+    const fileOnDisk = join(ROOT_DIR, entry.path);
+    if (!fs.existsSync(fileOnDisk) || fs.lstatSync(fileOnDisk).isDirectory()) continue;
+    const content = fs.readFileSync(fileOnDisk, 'utf8');
+    const deps    = new Set(entry.requires);
+    for (const [folderPathSlash, folderKey] of folderMap) {
+      if (content.includes(folderPathSlash)) {
+        deps.add(folderKey);
+      }
+    }
     entry.requires = Array.from(deps);
   }
 }
@@ -189,6 +215,7 @@ function addCodeMentionsDeps(manifest) {
 // ─── Invoke both helpers ─────────────────────────────────────────────────────────────
 addParentDeps(manifest);
 addCodeMentionsDeps(manifest);
+addFolderMentionsDeps(manifest);
 // ──────────────────────────────────────────────────────────────────────────────────────
 
 
