@@ -143,7 +143,7 @@ function addParentDeps(manifest) {
 
 // ─── 2) Code/YAML-file mentions ───────────────────────────────────
 function addCodeMentionsDeps(manifest) {
-  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml']);
+  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml', '.md']);
   const escapeRx  = s => s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
   const pathMap   = new Map(manifest.folders.concat(manifest.files).map(e => [e.path, e.key]));
 
