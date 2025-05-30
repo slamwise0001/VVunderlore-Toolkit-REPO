@@ -150,19 +150,19 @@ function addParentDeps(manifest) {
 
 // ─── 2) Scan code & YAML files for quoted-path mentions ─────────────────────────────
 function addCodeMentionsDeps(manifest) {
-  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml']);
+  // include .md so we catch templater calls & markdown links
+  const CODE_EXTS = new Set(['.js', '.ts', '.mjs', '.json', '.yaml', '.yml', '.md']);
   const escapeRx  = s => s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
 
-  // Map every path → key for quick lookup
+  // build path→key lookup once
   const pathMap = new Map(
     manifest.folders.concat(manifest.files).map(e => [e.path, e.key])
   );
 
   for (const entry of manifest.folders.concat(manifest.files)) {
-    const ext = extname(entry.path).toLowerCase();
+    const ext  = extname(entry.path).toLowerCase();
     const full = join(ROOT_DIR, entry.path);
-
-    // Only scan existing files with code/YAML extensions
+    // only scan code/YAML/MD files
     if (!fs.existsSync(full) || fs.lstatSync(full).isDirectory() || !CODE_EXTS.has(ext)) {
       continue;
     }
@@ -170,10 +170,12 @@ function addCodeMentionsDeps(manifest) {
     const content = fs.readFileSync(full, 'utf8');
     const deps    = new Set(entry.requires);
 
-    // Look for "path/to/other.md" or 'path/to/other.md' or `path/to/other.md`
     for (const [otherPath, otherKey] of pathMap) {
       if (otherPath === entry.path) continue;
-      const rx = new RegExp(`[\\'"\\\`]\\s*${escapeRx(otherPath)}\\s*[\\'"\\\`]`);
+      // match (path/to/file.md) or "path/to/file.md" or '…' or `…`
+      const rx = new RegExp(
+        `(?:["'\\(\\\`])\\s*${escapeRx(otherPath)}\\s*(?:["'\\)\\\`])`
+      );
       if (rx.test(content)) {
         deps.add(otherKey);
       }
@@ -182,6 +184,7 @@ function addCodeMentionsDeps(manifest) {
     entry.requires = Array.from(deps);
   }
 }
+
 
 // ─── Invoke both helpers ─────────────────────────────────────────────────────────────
 addParentDeps(manifest);
