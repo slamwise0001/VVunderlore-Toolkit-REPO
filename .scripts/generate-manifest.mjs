@@ -23,10 +23,8 @@ const EXCLUDED = new Set([
   '.scripts',
   'manifest.json',
   '.gitkeep.txt',
-  'Welcome.md',
   // your private WotC IP, demos, etc:
-  'Adventures/WotC IP',
-  'Adventures/Your-Homebrew-Demo',
+
   // …add any more you never want in the manifest
 ]);
 
@@ -52,6 +50,7 @@ const OPTIONAL = new Set([
   "Adventures/The Testing of VVunderlore/Session Notes/Session 2 - 3.19.25.md",
   "Adventures/The Testing of VVunderlore/Session Notes/Session 3 - 2.25.25.md",
   "Adventures/The Testing of VVunderlore/The Testing of VVunderlore - Adventure Hub.md",
+  'Welcome.md',
 ]);
 
 const manifest = {
