@@ -280,6 +280,20 @@
       ]
     },
     {
+      "path": "package-lock.json",
+      "optional": false,
+      "key": "package-lock",
+      "displayName": "Package Lock",
+      "requires": []
+    },
+    {
+      "path": "package.json",
+      "optional": false,
+      "key": "package",
+      "displayName": "Package",
+      "requires": []
+    },
+    {
       "path": "Tools/Party Overview.md",
       "optional": false,
       "key": "tools-party overview",
@@ -311,6 +325,13 @@
         "extras",
         "extras-templates"
       ]
+    },
+    {
+      "path": "tsconfig.json",
+      "optional": false,
+      "key": "tsconfig",
+      "displayName": "Tsconfig",
+      "requires": []
     },
     {
       "path": "World/People/Non-Player Characters/Lomin Topplesquirt.md",
