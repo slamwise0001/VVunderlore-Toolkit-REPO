@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6f513489d1e55fe1",
+        "id": "ca2a8b18f0d648d1",
         "type": "tabs",
         "children": [
           {
-            "id": "f90536da3110a05d",
+            "id": "a3efd5e8c266eefd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -196,9 +196,10 @@
   },
   "active": "7a8417feed5c0df5",
   "lastOpenFiles": [
+    "Compendium/Items/Homebrew Items/Wand of Templating.md",
+    "Welcome.md",
     "World/History",
     "World/Untitled.md",
-    "Welcome.md",
     "Adventures/Omninomicon.md",
     "Extras/Templates/newadventure_template.md",
     "Extras/Templates/base_sessiontemplate.md",
@@ -230,7 +231,6 @@
     "Adventures/The Testing of VVunderlore/Materials",
     "Adventures/The Testing of VVunderlore/Adventure",
     "Adventures/Cool Fun For Everyone",
-    "Adventures/The Testing of VVunderlore",
-    "Adventures/The Far Side of the Butt/Session Notes"
+    "Adventures/The Testing of VVunderlore"
   ]
 }

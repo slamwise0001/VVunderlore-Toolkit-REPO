@@ -1,0 +1,27 @@
+{
+  "name": "vvunderlore-toolkit-repo",
+  "version": "1.0.0",
+  "description": "...an environment for writing and running TTRPGs in [Obsidian](https://obsidian.md/). Inside you'll find an efficient file structure, templates for creating new compendiums items, and several modules and tools to make all the writing and gamerunning bit easier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate-manifest": "ts-node .scripts/validate-manifest.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slamwise0001/VVunderlore-Toolkit-Full.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slamwise0001/VVunderlore-Toolkit-Full/issues"
+  },
+  "homepage": "https://github.com/slamwise0001/VVunderlore-Toolkit-Full#readme",
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+  
+}
